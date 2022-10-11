@@ -1,0 +1,37 @@
+.footer {
+    .inner {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &-nav {
+        border: {
+            style: solid;
+            width: 1px;
+            color: #eee;
+            left: none;
+            right: none;
+        }
+        .inner {
+            min-height: 60px;
+            @include flex($j: space-between);
+            ul {
+                @include flex($g: 20px);
+                li {
+                    a {
+                        padding: 10px 0;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+
+    &-corp {
+        .inner {
+            padding: 30px 0;
+            @include flex($j: flex-start, $g: 30px);
+        }
+    }
+}
