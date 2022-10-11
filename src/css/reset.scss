@@ -69,8 +69,11 @@ li,
 p,
 span {
     color: $font-color;
-    font-size: 1.6rem;
-    font-family: Noto Sans KR, Roboto, sans-serif;
+    font: {
+        size: 1.6rem;
+        family: Noto Sans KR, Roboto, sans-serif;
+        weight: 300;
+    }
     letter-spacing: -.05rem;
 }
 
