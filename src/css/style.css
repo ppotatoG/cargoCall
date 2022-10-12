@@ -1,0 +1,160 @@
+.logo {
+  width: 140px;
+  height: 44px;
+  background-image: url("https://www.cargocall.co.kr/app/static/images/logo.png");
+  background-size: cover; }
+
+.section,
+.main {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: column; }
+  .section *,
+  .main * {
+    font-size: inherit; }
+
+.blind {
+  text-indent: -999999px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  background: 0 0; }
+
+a,
+article,
+aside,
+button,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+img,
+menu,
+nav,
+section,
+span {
+  display: block; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+  blockquote::after, blockquote::before,
+  q::after,
+  q::before {
+    content: '';
+    display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button,
+input {
+  outline: 0;
+  border: none; }
+
+html {
+  font-size: 10px; }
+
+a,
+button,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+li,
+p,
+span {
+  color: #454f5d;
+  font-size: 1.6rem;
+  font-family: Noto Sans KR, Roboto, sans-serif;
+  font-weight: 300;
+  letter-spacing: -.05rem; }
+
+img {
+  width: 100%; }
+
+a,
+button {
+  cursor: pointer; }
+
+.header {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0; }
+  .header .nav ul {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; }
+    .header .nav ul li a {
+      padding: 10px 0;
+      box-sizing: border-box; }
+      .header .nav ul li a.ico_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0; }
+        .header .nav ul li a.ico_wrap span {
+          font-size: 16px; }
+          .header .nav ul li a.ico_wrap span.material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48; }
+
+.footer .inner {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto; }
+.footer-nav {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eee;
+  border-left: none;
+  border-right: none; }
+  .footer-nav .inner {
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0; }
+    .footer-nav .inner ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px; }
+      .footer-nav .inner ul li a {
+        padding: 10px 0;
+        box-sizing: border-box; }
+.footer-corp .inner {
+  padding: 30px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px; }
+
+/*# sourceMappingURL=style.css.map */
