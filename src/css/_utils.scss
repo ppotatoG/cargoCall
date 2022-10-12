@@ -1,0 +1,21 @@
+$font-color: #454f5d;
+$point-color: #41CC93;
+$point-blue: #4A95F1;
+$point-red: #DA1F26;
+$point-green: rgb(0, 147, 64);
+
+@mixin flex($j : center, $a : center, $g : 0) {
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    gap: $g;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin head-font {
+    font-family: 'Black Han Sans', sans-serif;
+}
