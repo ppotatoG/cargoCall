@@ -40,12 +40,18 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px; }
+    @media (max-width: 767px) {
+      .section-how-price .article .inner {
+        width: 100%; } }
   .section-how-price .article-only_one ul {
     width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0; }
+    @media (max-width: 767px) {
+      .section-how-price .article-only_one ul {
+        width: 100%; } }
     .section-how-price .article-only_one ul li {
       text-align: center;
       flex: 1;
@@ -209,6 +215,9 @@
     justify-content: center;
     align-items: flex-start;
     gap: 0; }
+    @media (max-width: 767px) {
+      .section-compare .inner {
+        width: 100%; } }
     .section-compare .inner .article {
       flex: 1 1 500px;
       color: #41CC93; }

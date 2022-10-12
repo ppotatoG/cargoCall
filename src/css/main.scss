@@ -1,4 +1,5 @@
 @import "utils";
+@import "responsive";
 
 .main {
     font-size: 60px;
@@ -53,11 +54,17 @@
             }
             .inner {
                 width: 1000px;
+                @include mobile {
+                    width: 100%;
+                }
                 @include flex($j: space-between, $g: 20px);
             }
             &-only_one {
                 ul {
                     width: 1000px;
+                    @include mobile {
+                        width: 100%;
+                    }
                     @include flex;
                     li {
                         text-align: center;
@@ -283,6 +290,9 @@
         );
         .inner {
             width: 1000px;
+            @include mobile {
+                width: 100%;
+            }
             @include flex($a: flex-start);
             .article {
                 flex: 1 1 500px;

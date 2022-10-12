@@ -107,6 +107,9 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 0; }
+  @media (max-width: 767px) {
+    .header {
+      display: none; } }
   .header .nav ul {
     min-height: 60px;
     display: flex;
@@ -126,6 +129,9 @@ button {
           .header .nav ul li a.ico_wrap span.material-symbols-outlined {
             font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48; }
 
+@media (max-width: 767px) {
+  .footer {
+    display: none; } }
 .footer .inner {
   max-width: 1000px;
   width: 100%;

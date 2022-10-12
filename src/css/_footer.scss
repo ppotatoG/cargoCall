@@ -1,4 +1,8 @@
 .footer {
+    @include mobile {
+        display: none;
+    }
+
     .inner {
         max-width: 1000px;
         width: 100%;
