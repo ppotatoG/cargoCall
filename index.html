@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@300;500;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <ul>
-                <li><h1 class="logo"><a href="javascript:void(0);"></a></h1></li>
+                <li><h1><a href="javascript:void(0);" class="logo"></a></h1></li>
                 <li><a href="javascript:void(0);">서비스 소개</a></li>
                 <li><a href="javascript:void(0);">견적문의</a></li>
                 <li><a href="javascript:void(0);">차량제원</a></li>
@@ -36,6 +39,155 @@
             </ul>
         </nav>
     </header>
+
+    <main class="main">
+        <h2>
+            배차시 일어나는 다양한 이슈
+            <b>카고콜이</b>
+            <b class="gray">해결합니다.</b>
+        </h2>
+    </main>
+
+    <section class="section section-sub">
+        <h2>
+            <b>두명</b>이 할 일을 <b>한 명</b>이
+            <br><b>한 시간</b>할 일을 <b>십 분</b>만에
+        </h2>
+    </section>
+
+    <section class="section section-how-price">
+        <h2>합리적인 가격을 만드는 방법</h2>
+
+        <article class="article article-only_one">
+            <h3>화주와 기사 사이의 단 하나뿐인 매개체</h3>
+            <ul>
+                <li class="cargo_owner">
+                    <span class="blind img cargo_owner">화주</span>
+                    <span class="circle"></span>
+                    <p>화주</p>
+                </li>
+                <li class="cargo_call">
+                    <span class="blind img cargo_call">카고콜</span>
+                    <span class="circle"></span>
+                    <p>카고콜</p>
+                </li>
+                <li class="driver">
+                    <span class="blind img driver">기사</span>
+                    <span class="circle"></span>
+                    <p>기사</p>
+                </li>
+            </ul>
+        </article>
+
+        <article class="article article-optimization">
+            <h3>빅데이터를 활용한 최적화된 기사 배정</h3>
+            <div class="inner">
+                <ul>
+                    <li>카고콜</li>
+                    <li><p>고객 물동량 분석으로 최적의 기사 배정</p></li>
+                    <li><p>빠른 운임 지급으로 기사와의 신뢰 상승</p></li>
+                    <li><p>동일 화물 유경험 기사 배정 및 상하차지 DB 제공으로 공차시간, 소통비용 절김</p></li>
+                    <li><p>체계화된 전산화로 대량 주문 처리가능</p></li>
+                </ul>
+                <img src="src/image/optimization.png" alt="최적화된 기사 배정">
+            </div>
+        </article>
+
+        <article class="article article-stable_route">
+            <h3>북한빼고 다 가는 안정적인 노선 보유</h3>
+            <div class="inner">
+                <img src="src/image/map.jpg" alt="안정적인 노선 보유">
+                <div class="text_box">
+                    <p>
+                        1톤부터 25톤까지 전차종 배차 가능
+                        <br>수도권은 <b>퀵서비스</b> <b>OPEN</b>
+                    </p>
+                    <p>
+                        물량이 부족한 기피노선도
+                        <br>안정적으로 배차 <b>OK</b>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="section section-comfortable">
+        <h2>고객 업무가 편해지는 이유</h2>
+        <div class="text_box">
+            <ul>
+                <li>손쉬운 <span class="underline">온라인</span> 배차 신청</li>
+                <li><span class="underline">상하차지 까지 알림톡</span> 발송</li>
+                <li><span class="underline">웹에서 정산 및 운송내역</span> 확인</li>
+                <li><span class="underline">전산화된 인수증</span> 관리</li>
+                <li><span class="underline">빅데이터 기반</span> 최적기사 배정</li>
+            </ul>
+        </div>
+        <img src="src/image/counselor.png" alt="고객 업무가 편해지는 이유">
+    </section>
+
+    <section class="section section-compare">
+        <div class="inner">
+            <article class="article article-existing">
+                <h3>기존 운송사</h3>
+                <ul>
+                    <li>
+                        <h4>불필요하게 많은 유통과정</h4>
+                        <p>위탁계약 및 배차능력 부족으로 인한 불필요한 많은 유통과정</p>
+                    </li>
+                    <li>
+                        <h4>늦은 운임 지급은 곧 화주 이미지 실추</h4>
+                        <p>많은 유통과정으로 인해 늦은 운송료 지급</p>
+                    </li>
+                    <li>
+                        <h4>문제 발생시 기나긴 대처 시간</h4>
+                        <p>많은 유통과정과 전산화되지 않은 주선업으로 인해 원인파락, 문제 해결시간 상승</p>
+                    </li>
+                    <li>
+                        <h4>매번 다른 기사배정으로 같은 설명 반복</h4>
+                        <p>복잡한 장소의 매번 같은 설명으로 업무 효율 하락</p>
+                    </li>
+                    <li>
+                        <h4>복잡한 인수증 관리</h4>
+                        <p>수없이 쌓이는 인수증관리로 인한 스트레스</p>
+                    </li>
+                </ul>
+                <p class="label">현재</p>
+            </article>
+            <article class="article article-cargo_call">
+                <h3>카고콜</h3>
+                <ul>
+                    <li>
+                        <h4>고객님 - 카고콜 - 기사님</h4>
+                        <p>불필요한 유통과정을 없애 거품없는 합리적인 가격으로 운영 가능</p>
+                    </li>
+                    <li>
+                        <h4>최대 7일이내 운송료 지급</h4>
+                        <p>운송사는 화주의 얼굴,<br>더 빠르게 지급될 수 있도록 시장구조 개선에 꾸준한 노력</p>
+                    </li>
+                    <li>
+                        <h4>전산화로 인해 소통시간 ZERO</h4>
+                        <p>운송내역, 결제내역 조회 및 엑셀 다운로드 24시간 가능</p>
+                    </li>
+                    <li>
+                        <h4>경험있는 기사배정 및 설명 자동전달</h4>
+                        <p>운송오류를 줄이기 위해 해당장소 경험있는 기사 우전 배정<br>체계화된 전산화로 상하차지 특이사항 자동 전달</p>
+                    </li>
+                    <li>
+                        <h4>인수증을 웹에서 간편하게 확인</h4>
+                        <p>종이로 관리했던 인수증을 디지털화<br>24시간 웹에서 확인 가능<br>빠른 인수증 확인으로 업무효율 상승</p>
+                    </li>
+                </ul>
+                <p class="label">미래</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section section-sub">
+        <h2>
+            줄어드는 배차스트레스
+            <br>카고콜이 <b>약속</b>합니다
+        </h2>
+    </section>
 
     <footer class="footer footer-nav">
         <div class="inner">
@@ -58,7 +210,8 @@
             <h1 class="logo"></h1>
             <ul>
                 <li>Copyright © 카고콜(주)</li>
-                <li>대표이사 : 권경순 | 사업자등록번호 : 748-87-02213</li>
+                <li>대표이사 : 권경순</li>
+                <li>사업자등록번호 : 748-87-02213</li>
                 <li>주소 : 서울특별시 금천구 가산디지털1로 205, 9층 902-1호</li>
             </ul>
         </div>

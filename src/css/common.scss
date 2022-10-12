@@ -2,6 +2,7 @@ $font-color: #454f5d;
 $point-color: #41CC93;
 $point-blue: #4A95F1;
 $point-red: #DA1F26;
+$point-green: rgb(0, 147, 64);
 
 @mixin flex($j : center, $a : center, $g : 0) {
     display: flex;
@@ -15,6 +16,31 @@ $point-red: #DA1F26;
     height: $h;
 }
 
-.section {
+@mixin head-font {
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.logo {
+    @include size(140px, 44px);
+    background: {
+        image: url('https://www.cargocall.co.kr/app/static/images/logo.png');
+        size: cover;
+    }
+}
+
+.section,
+.main {
+    width: 100%;
     min-height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    @include flex(center, center);
+    flex-direction: column;
+    * {
+        font-size: inherit;
+    }
+}
+
+.blind {
+    text-indent: -999999px;
 }

@@ -1,0 +1,385 @@
+@import "common";
+
+.main {
+    font-size: 60px;
+    text-align: center;
+    line-height: 120px;
+    h2 {
+        color: $point-green;
+        font-weight: 400;
+        b {
+            display: block;
+            @include head-font;
+            font: {
+                size: 140px;
+                weight: normal;
+            }
+            &.gray {
+                color: $font-color;
+            }
+        }
+    }
+}
+
+.section {
+    &-sub {
+        @extend .main;
+        font-size: 80px;
+        line-height: 1;
+        h2 {
+            @include head-font;
+            b {
+                display: inline-block;
+                font-size: inherit;
+                color: $point-blue;
+            }
+        }
+    }
+
+    &-how-price {
+        h2 {
+            color: $point-color;
+            font-size: 60px;
+            text-align: center;
+            @include head-font;
+        }
+        .article {
+            padding: 100px 0;
+            h3 {
+                color: $point-blue;
+                font-size: 40px;
+                padding-bottom: 50px;
+                @include head-font;
+            }
+            .inner {
+                width: 1000px;
+                @include flex($j: space-between, $g: 20px);
+            }
+            &-only_one {
+                ul {
+                    width: 1000px;
+                    @include flex;
+                    li {
+                        text-align: center;
+                        flex: 1;
+                        position: relative;
+                        span {
+                            &.circle {
+                                margin: 20px auto;
+                                @include size(30px, 30px);
+                                background: $point-color;
+                                border-radius: 50%;
+                            }
+                            &.img {
+                                margin: 0 auto;
+                                @include size(120px, 140px);
+                                background: {
+                                    image: url('../image/how-price.png');
+                                    size: 300%;
+                                    repeat: no-repeat;
+                                }
+                                &.cargo_call {
+                                    background-position-x: 50%;
+                                }
+                                &.driver {
+                                    background-position-x: 100%;
+                                }
+                            }
+                        }
+                        p {
+                            font: {
+                                size: 20px;
+                                weight: 400;
+                            }
+                            color: $point-color;
+                        }
+                        &::before {
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            bottom: 65px;
+                            left: 0;
+                            background: $point-color;
+                            @include size(50%, 2px);
+                        }
+                        &::after {
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            bottom: 65px;
+                            right: 0;
+                            background: $point-color;
+                            @include size(50%, 2px);
+                        }
+                        &:nth-of-type(1) {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                        &:last-child {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            &-optimization {
+                h3 {
+                    text-align: right;
+                }
+                .inner {
+                    ul {
+                        font-size: 20px;
+                        position: relative;
+                        border-bottom: {
+                            style: solid;
+                            color: $font-color;
+                            width: 1px;
+                        }
+                        li {
+                            padding: 10px 20px;
+                            border: {
+                                style: solid;
+                                color: $font-color;
+                                width: 1px;
+                                top: none;
+                                bottom: none;
+                            }
+                            @include flex(flex-start, flex-start, 5px);
+                            &::before {
+                               content: '-';
+                                display: block;
+                            }
+                            &:first-child {
+                                background: $point-color;
+                                color: #fff;
+                                justify-content: center;
+                                border: none;
+                                font: {
+                                    size: 24px;
+                                    weight: 400;
+                                }
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+                        &:after,
+                        &:before {
+                            left: calc(100% - 1px);
+                            top: 50%;
+                            border: solid transparent;
+                            content: "";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                        }
+
+                        &:after {
+                            border: {
+                                left-color: #fff;
+                                width: 60px;
+                            }
+                            margin-top: -60px;
+                        }
+                        &:before {
+                            border: {
+                                left-color: $font-color;
+                                width: 61px;
+                            }
+                            margin-top: -61px;
+                        }
+                    }
+                    img {
+                        width: 500px;
+                    }
+                }
+            }
+            &-stable_route {
+                .inner   {
+                    position: relative;
+                    img {
+                        width: 550px;
+                    }
+                    .text_box {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                        @include flex($a: flex-end, $g: 20px);
+                        flex-direction: column;
+                        p {
+                            color: $point-blue;
+                            font-size: 40px;
+                            padding-bottom: 50px;
+                            text-align: right;
+                            @include head-font;
+                            b {
+                                font-size: 1.2em;
+                                color: $point-red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-comfortable {
+        @include flex($g: 40px);
+        flex-direction: column;
+        h2 {
+            color: $point-color;
+            font-size: 60px;
+            @include head-font;
+        }
+        .text_box {
+            align-self: flex-start;
+            margin-left: 60px;
+            ul {
+                li {
+                    font-size: 30px;
+                    padding: 10px 0;
+                    @include flex($j: flex-start, $g: 10px);
+                    &::before {
+                        display: block;
+                        content: '';
+                        @include size(40px, 40px);
+                        background: {
+                            image: url('../image/checkbox.png');
+                            size: cover;
+                            repeat: no-repeat;
+                        }
+                    }
+                    .underline {
+                        background: repeating-linear-gradient(
+                            to bottom,
+                            transparent,
+                            transparent 50%,
+                            yellow 50%,
+                            yellow 100%
+                        );
+                    }
+                }
+            }
+        }
+        img {
+            margin-top: -300px;
+            width: 600px;
+            align-self: flex-end;
+        }
+    }
+
+    &-compare {
+        max-width: 100vw;
+        background: repeating-linear-gradient(
+            to right,
+            transparent,
+            transparent 50%,
+            $point-color 50%,
+            $point-color 100%
+        );
+        .inner {
+            width: 1000px;
+            @include flex($a: flex-start);
+            .article {
+                flex: 1 1 500px;
+                color: $point-color;
+                * {
+                    color: inherit;
+                }
+                h3 {
+                    height: 200px;
+                    box-sizing: border-box;
+                    font: {
+                        size: 50px;
+                        style: italic;
+                    }
+                    border-bottom: {
+                        width: 1px;
+                        style: solid;
+                        color: $point-color;
+                    }
+                    @include flex($a: flex-end, $g: 10px);
+                    @include head-font;
+                    &::before {
+                        display: block;
+                        content: '';
+                        background: {
+                            image: url('../image/expression.png');
+                            repeat: no-repeat;
+                            size: 200%;
+                        }
+                        @include size(100px, 100px);
+                    }
+                }
+                ul {
+                    li {
+                        position: relative;
+                        padding: 40px 20px 0 60px;
+                        min-height: 130px;
+                        &::before {
+                            display: block;
+                            content: '';
+                            background: $point-color;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 43px;
+                            left: 25px;
+                            @include size(20px, 20px);
+                        }
+                        h4 {
+                            font-size: 24px;
+                            @include head-font;
+                        }
+                        p {
+                            font-size: 22px;
+                            padding-right: 20%;
+                            word-break: keep-all;
+                            line-height: 1.1;
+                        }
+                    }
+                }
+                p.label {
+                    width: fit-content;
+                    padding: 5px 40px;
+                    background: $point-color;
+                    color: #fff;
+                    font-size: 20px;
+                    margin: 20px 40px 60px auto;
+                    transform: skew(-20deg);
+                    @include head-font;
+                }
+                &-cargo_call {
+                    color: #fff;
+                    h3 {
+                        font-size: 80px;
+                        border-color: #fff;
+                        flex-direction: row-reverse;
+                        &::before {
+                            background-position-x: right;
+                        }
+                    }
+                    ul li {
+                        text-align: right;
+                        padding: 40px 60px 0 20px;
+                        &::before {
+                            left: auto;
+                            right: 25px;
+                            background: #fff;
+                        }
+                        p {
+                            padding: 0 0 0 20%;
+                        }
+                    }
+                    p.label {
+                        background: #fff;
+                        color: $point-color;
+                    }
+                }
+            }
+        }
+    }
+}
