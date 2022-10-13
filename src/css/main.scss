@@ -5,6 +5,10 @@
     font-size: 60px;
     text-align: center;
     line-height: 120px;
+    @include mobile {
+        font-size: 3rem;
+        line-height: 1;
+    }
     h2 {
         color: $point-green;
         font-weight: 400;
@@ -14,6 +18,9 @@
             font: {
                 size: 140px;
                 weight: normal;
+            }
+            @include mobile {
+                font-size: 8rem;
             }
             &.gray {
                 color: $font-color;
@@ -27,12 +34,20 @@
         @extend .main;
         font-size: 80px;
         line-height: 1;
+        @include mobile {
+            font-size: 6rem;
+        }
         h2 {
             @include head-font;
             b {
                 display: inline-block;
                 font-size: inherit;
                 color: $point-blue;
+                &:nth-of-type(3) {
+                    @include mobile {
+                        margin-top: 8vw;
+                    }
+                }
             }
         }
     }
@@ -43,21 +58,34 @@
             font-size: 60px;
             text-align: center;
             @include head-font;
+            @include mobile {
+                font-size: 6rem;
+            }
         }
         .article {
             padding: 100px 0;
+            @include mobile {
+                padding: 12vw 0;
+            }
             h3 {
                 color: $point-blue;
                 font-size: 40px;
                 padding-bottom: 50px;
                 @include head-font;
+                @include mobile {
+                    font-size: 4rem;
+                    text-align: center;
+                    padding: 0 4vw;
+                }
             }
             .inner {
                 width: 1000px;
+                @include flex($j: space-between, $g: 20px);
                 @include mobile {
                     width: 100%;
+                    flex-direction: column;
+                    gap: 0;
                 }
-                @include flex($j: space-between, $g: 20px);
             }
             &-only_one {
                 ul {
@@ -134,6 +162,9 @@
             &-optimization {
                 h3 {
                     text-align: right;
+                    @include mobile {
+                        text-align: center;
+                    }
                 }
                 .inner {
                     ul {
@@ -143,6 +174,11 @@
                             style: solid;
                             color: $font-color;
                             width: 1px;
+                        }
+                        @include mobile {
+                            width: 90%;
+                            font-size: large;
+                            margin: 4vw auto -4vw;
                         }
                         li {
                             padding: 10px 20px;
@@ -154,6 +190,9 @@
                                 bottom: none;
                             }
                             @include flex(flex-start, flex-start, 5px);
+                            @include mobile {
+                                padding: 2vw 4vw;
+                            }
                             &::before {
                                content: '-';
                                 display: block;
@@ -166,6 +205,9 @@
                                 font: {
                                     size: 24px;
                                     weight: 400;
+                                }
+                                @include mobile {
+                                    font-size: 6vw;
                                 }
                                 &::before {
                                     display: none;
@@ -182,6 +224,10 @@
                             width: 0;
                             position: absolute;
                             pointer-events: none;
+                            @include mobile {
+                                top:100%;
+                                left: calc(50% - 4vw);
+                            }
                         }
 
                         &:after {
@@ -190,6 +236,12 @@
                                 width: 60px;
                             }
                             margin-top: -60px;
+                            @include mobile {
+                                //width: vw;
+                                //margin-top: 20vw;
+                                border-left-color: transparent;
+                                border-top-color: #fff;
+                            }
                         }
                         &:before {
                             border: {
@@ -197,10 +249,19 @@
                                 width: 61px;
                             }
                             margin-top: -61px;
+                            @include mobile {
+                                //width: 8vw;
+                                //margin-top: 20vw;
+                                border-left-color: transparent;
+                                border-top-color: $font-color;
+                            }
                         }
                     }
                     img {
                         width: 500px;
+                        @include mobile {
+                            width: 96%;
+                        }
                     }
                 }
             }
@@ -209,20 +270,34 @@
                     position: relative;
                     img {
                         width: 550px;
+                        @include mobile {
+                            width: 96%;
+                        }
                     }
                     .text_box {
                         position: absolute;
                         top: 0;
                         right: 0;
                         height: 100%;
-                        @include flex($a: flex-end, $g: 20px);
                         flex-direction: column;
+                        @include flex($a: flex-end, $g: 20px);
+                        @include mobile {
+                            position: static;
+                            margin-top: 4vw;
+                        }
                         p {
                             color: $point-blue;
                             font-size: 40px;
                             padding-bottom: 50px;
                             text-align: right;
                             @include head-font;
+                            @include mobile {
+                                text-align: center;
+                                font-size: x-large;
+                                padding: 2vw;
+                                width: 100%;
+                                box-sizing: border-box;
+                            }
                             b {
                                 font-size: 1.2em;
                                 color: $point-red;
@@ -235,25 +310,42 @@
     }
 
     &-comfortable {
-        @include flex($g: 40px);
         flex-direction: column;
+        @include flex($g: 40px);
+        @include mobile {
+            gap: 2vw;
+        }
         h2 {
             color: $point-color;
             font-size: 60px;
             @include head-font;
+            @include mobile {
+                font-size: 6rem;
+                text-align: center;
+                word-break: keep-all;
+            }
         }
         .text_box {
             align-self: flex-start;
             margin-left: 60px;
+            @include mobile {
+                width: 90%;
+                margin: 0 auto;
+                position: sticky;
+            }
             ul {
                 li {
                     font-size: 30px;
                     padding: 10px 0;
                     @include flex($j: flex-start, $g: 10px);
+                    @include mobile {
+                        font-size: x-large;
+                        padding: 2vw 0;
+                    }
                     &::before {
                         display: block;
                         content: '';
-                        @include size(40px, 40px);
+                        @include size(3rem, 3rem);
                         background: {
                             image: url('../image/checkbox.png');
                             size: cover;
@@ -276,6 +368,10 @@
             margin-top: -300px;
             width: 600px;
             align-self: flex-end;
+            @include mobile {
+                width: 90%;
+                margin: -24vw -20vw 0 0;
+            }
         }
     }
 
@@ -288,6 +384,9 @@
             $point-color 50%,
             $point-color 100%
         );
+        @include mobile {
+            background: $point-color;
+        }
         .inner {
             width: 1000px;
             @include mobile {
@@ -373,20 +472,30 @@
                         }
                     }
                     ul li {
-                        text-align: right;
-                        padding: 40px 60px 0 20px;
                         &::before {
-                            left: auto;
-                            right: 25px;
                             background: #fff;
                         }
-                        p {
-                            padding: 0 0 0 20%;
+                        @include desktop {
+                            text-align: right;
+                            padding: 40px 60px 0 20px;
+                            left: auto;
+                            right: 25px;
+                            p {
+                                padding: 0 0 0 20%;
+                            }
                         }
                     }
                     p.label {
                         background: #fff;
                         color: $point-color;
+                    }
+                    @include mobile {
+                        flex: 100%;
+                    }
+                }
+                &:first-child {
+                    @include mobile {
+                        display: none;
                     }
                 }
             }
