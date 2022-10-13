@@ -277,7 +277,6 @@
                             font-size: 40px;
                             padding-bottom: 50px;
                             text-align: right;
-                            @include head-font;
                             @include mobile {
                                 text-align: center;
                                 font-size: x-large;

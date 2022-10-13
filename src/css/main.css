@@ -220,8 +220,7 @@
         color: #4A95F1;
         font-size: 40px;
         padding-bottom: 50px;
-        text-align: right;
-        font-family: 'Black Han Sans', sans-serif; }
+        text-align: right; }
         @media (max-width: 767px) {
           .section-how-price .article-stable_route .inner .text_box p {
             text-align: center;
