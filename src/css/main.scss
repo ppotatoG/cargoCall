@@ -225,8 +225,7 @@
                             position: absolute;
                             pointer-events: none;
                             @include mobile {
-                                top:100%;
-                                left: calc(50% - 4vw);
+                                display: none;
                             }
                         }
 
@@ -236,12 +235,6 @@
                                 width: 60px;
                             }
                             margin-top: -60px;
-                            @include mobile {
-                                //width: vw;
-                                //margin-top: 20vw;
-                                border-left-color: transparent;
-                                border-top-color: #fff;
-                            }
                         }
                         &:before {
                             border: {
@@ -249,12 +242,6 @@
                                 width: 61px;
                             }
                             margin-top: -61px;
-                            @include mobile {
-                                //width: 8vw;
-                                //margin-top: 20vw;
-                                border-left-color: transparent;
-                                border-top-color: $font-color;
-                            }
                         }
                     }
                     img {
@@ -427,8 +414,13 @@
                 ul {
                     li {
                         position: relative;
-                        padding: 40px 20px 0 60px;
-                        min-height: 130px;
+                        @include desktop {
+                            padding: 40px 20px 0 60px;
+                            min-height: 130px;
+                        }
+                        @include mobile {
+                            padding: 6vw 0 0 12vw;
+                        }
                         &::before {
                             display: block;
                             content: '';
@@ -438,6 +430,12 @@
                             top: 43px;
                             left: 25px;
                             @include size(20px, 20px);
+                            @include mobile {
+                                top: 8vw;
+                                left: 6vw;
+                                width: 3vw;
+                                height: 3vw;
+                            }
                         }
                         h4 {
                             font-size: 24px;
@@ -448,6 +446,10 @@
                             padding-right: 20%;
                             word-break: keep-all;
                             line-height: 1.1;
+                            @include mobile {
+                                font-size: large;
+                                padding-right: 10%;
+                            }
                         }
                     }
                 }
@@ -460,6 +462,9 @@
                     margin: 20px 40px 60px auto;
                     transform: skew(-20deg);
                     @include head-font;
+                    @include mobile {
+                        margin: 8vw 4vw 12vw auto;
+                    }
                 }
                 &-cargo_call {
                     color: #fff;
@@ -472,17 +477,19 @@
                         }
                     }
                     ul li {
-                        &::before {
-                            background: #fff;
-                        }
                         @include desktop {
                             text-align: right;
                             padding: 40px 60px 0 20px;
-                            left: auto;
-                            right: 25px;
                             p {
                                 padding: 0 0 0 20%;
                             }
+                        }
+                        &::before {
+                            @include desktop {
+                                left: auto;
+                                right: 25px;
+                            }
+                            background: #fff;
                         }
                     }
                     p.label {
