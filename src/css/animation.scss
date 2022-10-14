@@ -55,7 +55,7 @@
             opacity: 0;
             transform: translateY(40px);
             animation: {
-                name: subTitle;
+                name: transformY;
                 delay: .5s;
                 duration: 1s;
                 fill-mode: forwards;
@@ -119,6 +119,29 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+            &-optimization {
+                ul {
+                    z-index: 1;
+                    transform: translateX(-60px);
+                    opacity: 0;
+                    animation: {
+                        name: transformX;
+                        delay: 1s;
+                        duration: .8s;
+                        fill-mode: forwards;
+                    }
+                }
+                img {
+                    transform: translateY(-60px);
+                    opacity: 0;
+                    animation: {
+                        name: transformY;
+                        delay: .5s;
+                        duration: .8s;
+                        fill-mode: forwards;
                     }
                 }
             }
