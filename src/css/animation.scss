@@ -34,3 +34,36 @@
         }
     }
 }
+
+.section {
+    &-sub {
+        //height: 200vh;
+        //display: block;
+        //position: relative;
+        //h2 {
+        //    position: fixed;
+        //    top: 45%;
+        //    left: 0;
+        //    width: 100%;
+        //    opacity: 0;
+        //    transform: translateY(20px);
+        //    &:nth-of-type(2) {
+        //        top: 55%;
+        //    }
+        //}
+        h2 {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: {
+                name: subTitle;
+                delay: .5s;
+                duration: 1s;
+                fill-mode: forwards;
+            }
+            &:nth-of-type(2) {
+                animation-delay: 1s;
+            }
+        }
+    }
+}
+
