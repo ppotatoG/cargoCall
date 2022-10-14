@@ -24,3 +24,15 @@
         opacity: 1;
     }
 }
+
+@keyframes onlyOnePseudo {
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes onlyOneShow {
+    100% {
+        visibility: visible;
+    }
+}

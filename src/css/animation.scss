@@ -65,5 +65,64 @@
             }
         }
     }
+    &-how-price {
+        h2 {
+            position: sticky;
+            top: 80px;
+            left: 0;
+            z-index: 8;
+            background: #fff;
+            width: 100%;
+            padding: 20px 0;
+            transition: top .2s;
+        }
+
+        .article {
+            &-only_one {
+                ul {
+                    li {
+                        &::before,
+                        &::after {
+                            width: 0;
+                        }
+                        > *:nth-child(n + 2) {
+                            visibility: hidden;
+                        }
+
+                        @for $i from 1 to 4 {
+                            &:nth-of-type(#{$i}) {
+                                *:nth-child(n + 2) {
+                                    animation: {
+                                        name: onlyOneShow;
+                                        delay: #{($i - 1) * 2 + .8}s;
+                                        duration: .4s;
+                                        fill-mode: forwards;
+                                    }
+                                }
+                                &::before {
+                                    animation: {
+                                        name: onlyOnePseudo;
+                                        delay: #{($i - 1) * 2}s;
+                                        duration: .8s;
+                                        timing-function: linear;
+                                        fill-mode: forwards;
+                                    }
+                                }
+                                &::after {
+                                    animation: {
+                                        name: onlyOnePseudo;
+                                        delay: #{($i - 1) * 2 + 1.2}s;
+                                        duration: .8s;
+                                        timing-function: linear;
+                                        fill-mode: forwards;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 

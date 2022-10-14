@@ -9,16 +9,27 @@
   .main h2, .section-sub h2 {
     color: #009340;
     font-weight: 400; }
-    .main h2 b, .section-sub h2 b {
+    .main h2 b, .section-sub h2 b,
+    .main h2 span,
+    .section-sub h2 span {
+      color: inherit;
       display: block;
       font-family: 'Black Han Sans', sans-serif;
       font-size: 140px;
       font-weight: normal; }
       @media (max-width: 767px) {
-        .main h2 b, .section-sub h2 b {
+        .main h2 b, .section-sub h2 b,
+        .main h2 span,
+        .section-sub h2 span {
           font-size: 8rem; } }
-      .main h2 b.gray, .section-sub h2 b.gray {
+      .main h2 b.gray, .section-sub h2 b.gray,
+      .main h2 span.gray,
+      .section-sub h2 span.gray {
         color: #454f5d; }
+      .main h2 b > span, .section-sub h2 b > span,
+      .main h2 span > span,
+      .section-sub h2 span > span {
+        display: inline-block; }
 
 .section-sub {
   font-size: 80px;
@@ -117,7 +128,7 @@
         content: '';
         position: absolute;
         bottom: 65px;
-        right: 0;
+        left: 50%;
         background: #41CC93;
         width: 50%;
         height: 2px; }

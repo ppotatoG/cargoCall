@@ -148,7 +148,7 @@
                             content: '';
                             position: absolute;
                             bottom: 65px;
-                            right: 0;
+                            left: 50%;
                             background: $point-color;
                             @include size(50%, 2px);
                         }
