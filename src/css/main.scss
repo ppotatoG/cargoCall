@@ -12,7 +12,9 @@
     h2 {
         color: $point-green;
         font-weight: 400;
-        b {
+        b,
+        span{
+            color: inherit;
             display: block;
             @include head-font;
             font: {
@@ -24,6 +26,10 @@
             }
             &.gray {
                 color: $font-color;
+            }
+
+            > span {
+                display: inline-block;
             }
         }
     }
