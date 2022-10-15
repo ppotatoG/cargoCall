@@ -5,6 +5,9 @@
 @keyframes onlyOnePseudo {
   100% {
     width: 50%; } }
+@keyframes onlyOnePseudoMobile {
+  100% {
+    height: 50%; } }
 @keyframes onlyOneShow {
   100% {
     visibility: visible; } }
@@ -50,8 +53,15 @@
   width: 100%;
   padding: 20px 0;
   transition: top .2s; }
+  @media (max-width: 767px) {
+    .section-how-price h2 {
+      top: 0; } }
 .section-how-price .article-only_one ul li::before, .section-how-price .article-only_one ul li::after {
   width: 0; }
+  @media (max-width: 767px) {
+    .section-how-price .article-only_one ul li::before, .section-how-price .article-only_one ul li::after {
+      width: 2px;
+      height: 0; } }
 .section-how-price .article-only_one ul li > *:nth-child(n + 2) {
   visibility: hidden; }
 .section-how-price .article-only_one ul li:nth-of-type(1) *:nth-child(n + 2) {
@@ -65,12 +75,18 @@
   animation-duration: .8s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .section-how-price .article-only_one ul li:nth-of-type(1)::before {
+      animation-name: onlyOnePseudoMobile; } }
 .section-how-price .article-only_one ul li:nth-of-type(1)::after {
   animation-name: onlyOnePseudo;
   animation-delay: 1.2s;
   animation-duration: .8s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .section-how-price .article-only_one ul li:nth-of-type(1)::after {
+      animation-name: onlyOnePseudoMobile; } }
 .section-how-price .article-only_one ul li:nth-of-type(2) *:nth-child(n + 2) {
   animation-name: onlyOneShow;
   animation-delay: 2.8s;
@@ -82,12 +98,18 @@
   animation-duration: .8s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .section-how-price .article-only_one ul li:nth-of-type(2)::before {
+      animation-name: onlyOnePseudoMobile; } }
 .section-how-price .article-only_one ul li:nth-of-type(2)::after {
   animation-name: onlyOnePseudo;
   animation-delay: 3.2s;
   animation-duration: .8s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .section-how-price .article-only_one ul li:nth-of-type(2)::after {
+      animation-name: onlyOnePseudoMobile; } }
 .section-how-price .article-only_one ul li:nth-of-type(3) *:nth-child(n + 2) {
   animation-name: onlyOneShow;
   animation-delay: 4.8s;
@@ -99,12 +121,18 @@
   animation-duration: .8s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .section-how-price .article-only_one ul li:nth-of-type(3)::before {
+      animation-name: onlyOnePseudoMobile; } }
 .section-how-price .article-only_one ul li:nth-of-type(3)::after {
   animation-name: onlyOnePseudo;
   animation-delay: 5.2s;
   animation-duration: .8s;
   animation-timing-function: linear;
   animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .section-how-price .article-only_one ul li:nth-of-type(3)::after {
+      animation-name: onlyOnePseudoMobile; } }
 .section-how-price .article-optimization ul {
   z-index: 1;
   transform: translateX(-60px);

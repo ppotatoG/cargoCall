@@ -96,9 +96,6 @@
             &-only_one {
                 ul {
                     width: 1000px;
-                    @include mobile {
-                        width: 100%;
-                    }
                     @include flex;
                     li {
                         text-align: center;
@@ -160,6 +157,38 @@
                         &:last-child {
                             &::after {
                                 display: none;
+                            }
+                        }
+                    }
+
+                    @include mobile {
+                        width: 70%;
+                        flex-direction: column;
+                        margin: 0 auto;
+                        li {
+                            width: 100%;
+                            @include flex($j: space-between);
+                            flex-direction: row-reverse;
+                            span {
+                                &.circle,
+                                &.img, {
+                                    margin: 0;
+                                }
+                            }
+                            p {
+                                position: absolute;
+                                top: calc(50% - 15px);
+                                left: 60px;
+                            }
+                            &::before {
+                                top: 0;
+                                left: 15px;
+                                @include size(2px, 50%);
+                            }
+                            &::after {
+                                top: 50%;
+                                left: 15px;
+                                @include size(2px, 50%);
                             }
                         }
                     }

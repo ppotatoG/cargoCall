@@ -75,6 +75,9 @@
             width: 100%;
             padding: 20px 0;
             transition: top .2s;
+            @include mobile {
+                top: 0;
+            }
         }
 
         .article {
@@ -84,6 +87,10 @@
                         &::before,
                         &::after {
                             width: 0;
+                            @include mobile {
+                                width: 2px;
+                                height: 0;
+                            }
                         }
                         > *:nth-child(n + 2) {
                             visibility: hidden;
@@ -107,6 +114,9 @@
                                         timing-function: linear;
                                         fill-mode: forwards;
                                     }
+                                    @include mobile {
+                                        animation-name: onlyOnePseudoMobile;
+                                    }
                                 }
                                 &::after {
                                     animation: {
@@ -115,6 +125,9 @@
                                         duration: .8s;
                                         timing-function: linear;
                                         fill-mode: forwards;
+                                    }
+                                    @include mobile {
+                                        animation-name: onlyOnePseudoMobile;
                                     }
                                 }
                             }
