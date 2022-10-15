@@ -178,5 +178,37 @@
             }
         }
     }
+    &-compare {
+        @include mobile {
+            .inner {
+                position: sticky;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                @include size(100vw, 100vh);
+                background: repeating-linear-gradient(
+                    to bottom,
+                    #fff,
+                    #fff 50%,
+                    $point-color 50%,
+                    $point-color 100%
+                );
+            }
+            .text_contents {
+                li {
+                    opacity: 0;
+                    transition: opacity .1s, transform .1s;
+                }
+                &.observer {
+                    opacity: 0.5;
+                    li {
+                        opacity: 1;
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+    }
 }
+
 

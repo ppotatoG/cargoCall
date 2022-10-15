@@ -504,7 +504,8 @@
           z-index: 9;
           box-sizing: border-box;
           height: 30vh;
-          padding: 10vw 8vw 0 12vw; }
+          padding: 10vw 8vw 0 12vw;
+          width: 100%; }
           .section-compare .inner ul.text_contents li p {
             padding: 0; }
           .section-compare .inner ul.text_contents li::before {

@@ -164,5 +164,22 @@
     animation-delay: 2s; }
   .section-comfortable .text_box li:nth-of-type(5) {
     animation-delay: 2.5s; }
+@media (max-width: 767px) {
+  .section-compare .inner {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(to bottom, #fff, #fff 50%, #41CC93 50%, #41CC93 100%); }
+  .section-compare .text_contents li {
+    opacity: 0;
+    transition: opacity .1s, transform .1s; }
+  .section-compare .text_contents.observer {
+    opacity: 0.5; }
+    .section-compare .text_contents.observer li {
+      opacity: 1;
+      transform: translateY(-10px); } }
 
 /*# sourceMappingURL=animation.css.map */

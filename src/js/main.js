@@ -1,28 +1,41 @@
 const point = window.innerHeight;
 
-const mainSubAnimation = () => {
-    const el = document.querySelector('.js-test');
-    const rect = el.getBoundingClientRect();
+const compareAnimation = () => {
+    const section = document.querySelector('.section-compare');
+    const list = section.querySelectorAll('.text_contents');
+    const rect = section.getBoundingClientRect();
 
-    if((rect.top < point * -1 || rect.top > point)) {
-        return false;
-    }
+    section.style.height = `${list.length}00vh`;
 
-    if(rect.top <= point - point * .1) {
-        const percent = Math.ceil(49 - rect.top / rect.height * 100);
-        const h2 = el.querySelectorAll('h2');
+    if(rect.top < 0 && Math.abs(rect.top) < rect.height) {
+        const percent = Math.ceil(Math.abs(rect.top) / rect.height * 100);
+        const curIndex = Math.floor(percent / (100 / list.length))
+        const curPercent = percent * list.length % 100;
 
-        const opaPer = percent * 100;
-        const tranYPer = 20 / percent * 100;
+        list.forEach(item => item.classList.remove('observer'));
+        list[curIndex].classList.add('observer');
+        section.classList.add('observer');
 
-        if (percent > 25 && percent < 50) {
-            console.log(percent)
-            console.log(percent * percent / 25)
-            // console.log(tranYPer)
+        if(curPercent <= 20) {
+            list[curIndex].style.opacity = `${curPercent / 20}`;
+            [...list[curIndex].children].forEach(item => {
+                item.style.transform = `translateY(${curPercent - 20}px)`;
+            });
+        } else if(curPercent >= 80) {
+            list[curIndex].style.opacity = `${20/ curPercent}`;
+            [...list[curIndex].children].forEach(item => {
+                item.style.transform = `translateY(${curPercent - 80}px)`;
+            })
+        } else {
+            list[curIndex].style.opacity = '1';
         }
+    } else {
+        return false;
     }
 }
 
 (() => {
-    // window.addEventListener('scroll', mainSubAnimation);
+    if(window.innerWidth <= 767) {
+        window.addEventListener('scroll', compareAnimation);
+    }
 })();
