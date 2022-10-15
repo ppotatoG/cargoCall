@@ -148,5 +148,21 @@
   animation-delay: .5s;
   animation-duration: .8s;
   animation-fill-mode: forwards; }
+.section-comfortable .text_box li {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation-name: transformX;
+  animation-duration: .2s;
+  animation-fill-mode: forwards; }
+  .section-comfortable .text_box li:nth-of-type(1) {
+    animation-delay: 0.5s; }
+  .section-comfortable .text_box li:nth-of-type(2) {
+    animation-delay: 1s; }
+  .section-comfortable .text_box li:nth-of-type(3) {
+    animation-delay: 1.5s; }
+  .section-comfortable .text_box li:nth-of-type(4) {
+    animation-delay: 2s; }
+  .section-comfortable .text_box li:nth-of-type(5) {
+    animation-delay: 2.5s; }
 
 /*# sourceMappingURL=animation.css.map */

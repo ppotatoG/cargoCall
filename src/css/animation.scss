@@ -160,5 +160,23 @@
             }
         }
     }
+    &-comfortable {
+        .text_box {
+            li {
+                transform: translateX(-50px);
+                opacity: 0;
+                animation: {
+                    name: transformX;
+                    duration: .2s;
+                    fill-mode: forwards;
+                }
+                @for $i from 1 to 6 {
+                    &:nth-of-type(#{$i}) {
+                        animation-delay: #{$i *.5}s;
+                    }
+                }
+            }
+        }
+    }
 }
 
