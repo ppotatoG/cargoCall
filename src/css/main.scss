@@ -300,24 +300,32 @@
                         position: absolute;
                         top: 0;
                         right: 0;
-                        height: 100%;
+                        height: 50%;
                         flex-direction: column;
-                        @include flex($a: flex-end, $g: 20px);
+                        @include flex($a: flex-end, $g: 50px);
                         @include mobile {
-                            position: static;
-                            margin-top: 4vw;
+                            flex-direction: column-reverse;
+                            top: auto;
+                            bottom: 20%;
+                            right: 4%;
+                            gap: 10%;
                         }
                         p {
                             color: $point-blue;
                             font-size: 40px;
-                            padding-bottom: 50px;
                             text-align: right;
                             @include mobile {
-                                text-align: center;
-                                font-size: x-large;
-                                padding: 2vw;
-                                width: 100%;
+                                text: {
+                                    align: right;
+                                    shadow: 0 0 5px #fff;
+                                }
+                                font: {
+                                    size: x-large;
+                                    weight: 800;
+                                }
                                 box-sizing: border-box;
+                                padding: 0;
+                                -webkit-text-stroke: 1px #fff;
                             }
                             b {
                                 font-size: 1.2em;
