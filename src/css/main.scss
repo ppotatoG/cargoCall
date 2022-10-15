@@ -342,6 +342,7 @@
         @include flex($g: 40px);
         @include mobile {
             gap: 2vw;
+            overflow: hidden;
         }
         h2 {
             color: $point-color;

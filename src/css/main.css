@@ -279,7 +279,8 @@
   gap: 40px; }
   @media (max-width: 767px) {
     .section-comfortable {
-      gap: 2vw; } }
+      gap: 2vw;
+      overflow: hidden; } }
   .section-comfortable h2 {
     color: #41CC93;
     font-size: 60px;

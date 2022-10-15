@@ -1,11 +1,11 @@
-const point = window.innerHeight;
-
 const compareAnimation = () => {
     const section = document.querySelector('.section-compare');
     const list = section.querySelectorAll('.text_contents');
     const rect = section.getBoundingClientRect();
 
     section.style.height = `${list.length}00vh`;
+
+    // console.log(rect.height - window.innerHeight)
 
     if(rect.top < 0 && Math.abs(rect.top) < rect.height) {
         const percent = Math.ceil(Math.abs(rect.top) / rect.height * 100);
