@@ -14,9 +14,9 @@
     .section-sub h2 span {
       color: inherit;
       display: block;
-      font-family: 'Black Han Sans', sans-serif;
       font-size: 140px;
-      font-weight: normal; }
+      font-weight: normal;
+      font-family: 'Black Han Sans', sans-serif; }
       @media (max-width: 767px) {
         .main h2 b, .section-sub h2 b,
         .main h2 span,
@@ -92,25 +92,25 @@
       position: relative; }
       .section-how-price .article-only_one ul li span.circle {
         margin: 20px auto;
-        width: 30px;
-        height: 30px;
         background: #41CC93;
-        border-radius: 50%; }
+        border-radius: 50%;
+        width: 30px;
+        height: 30px; }
       .section-how-price .article-only_one ul li span.img {
         margin: 0 auto;
-        width: 120px;
-        height: 140px;
         background-image: url("../image/how-price.png");
         background-size: 300%;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 140px; }
         .section-how-price .article-only_one ul li span.img.cargo_call {
           background-position-x: 50%; }
         .section-how-price .article-only_one ul li span.img.driver {
           background-position-x: 100%; }
       .section-how-price .article-only_one ul li p {
+        color: #41CC93;
         font-size: 20px;
-        font-weight: 400;
-        color: #41CC93; }
+        font-weight: 400; }
       .section-how-price .article-only_one ul li::before {
         display: block;
         content: '';

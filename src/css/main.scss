@@ -16,18 +16,17 @@
         span{
             color: inherit;
             display: block;
-            @include head-font;
             font: {
                 size: 140px;
                 weight: normal;
             }
+            @include head-font;
             @include mobile {
                 font-size: 8rem;
             }
             &.gray {
                 color: $font-color;
             }
-
             > span {
                 display: inline-block;
             }
@@ -104,18 +103,18 @@
                         span {
                             &.circle {
                                 margin: 20px auto;
-                                @include size(30px, 30px);
                                 background: $point-color;
                                 border-radius: 50%;
+                                @include size(30px, 30px);
                             }
                             &.img {
                                 margin: 0 auto;
-                                @include size(120px, 140px);
                                 background: {
                                     image: url('../image/how-price.png');
                                     size: 300%;
                                     repeat: no-repeat;
                                 }
+                                @include size(120px, 140px);
                                 &.cargo_call {
                                     background-position-x: 50%;
                                 }
@@ -125,11 +124,11 @@
                             }
                         }
                         p {
+                            color: $point-color;
                             font: {
                                 size: 20px;
                                 weight: 400;
                             }
-                            color: $point-color;
                         }
                         &::before {
                             display: block;
