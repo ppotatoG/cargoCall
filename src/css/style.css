@@ -263,9 +263,6 @@ button {
         .header .nav ul li a:hover {
           color: #41CC93; }
 
-@media (max-width: 767px) {
-  .footer {
-    display: none; } }
 .footer .inner {
   max-width: 1000px;
   width: 100%;
@@ -298,5 +295,22 @@ button {
   justify-content: flex-start;
   align-items: center;
   gap: 50px; }
+.footer-corp .copyright {
+  display: none; }
+@media (max-width: 767px) {
+  .footer-nav {
+    display: block; }
+    .footer-nav .inner {
+      display: block; }
+      .footer-nav .inner ul {
+        flex-wrap: wrap; }
+        .footer-nav .inner ul a {
+          font-size: 1.2rem; }
+  .footer-corp .inner {
+    display: none; }
+  .footer-corp .copyright {
+    display: block;
+    text-align: center;
+    padding: 4vw 0; } }
 
 /*# sourceMappingURL=style.css.map */

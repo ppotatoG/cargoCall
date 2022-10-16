@@ -1,14 +1,9 @@
 .footer {
-    @include mobile {
-        display: none;
-    }
-
     .inner {
         max-width: 1000px;
         width: 100%;
         margin: 0 auto;
     }
-
     &-nav {
         border: {
             style: solid;
@@ -34,11 +29,37 @@
             }
         }
     }
-
     &-corp {
         .inner {
             padding: 30px 0;
             @include flex($j: flex-start, $g: 50px);
+        }
+        .copyright {
+            display: none;
+        }
+    }
+    @include mobile {
+        &-nav {
+            display: block;
+            .inner {
+                display: block;
+                ul {
+                    flex-wrap: wrap;
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        &-corp {
+            .inner {
+                display: none;
+            }
+            .copyright {
+                display: block;
+                text-align: center;
+                padding: 4vw 0;
+            }
         }
     }
 }
