@@ -55,7 +55,7 @@
   transition: top .2s; }
   @media (max-width: 767px) {
     .section-how-price h2 {
-      top: 0; } }
+      top: 10vh; } }
 .section-how-price .article-only_one ul li::before, .section-how-price .article-only_one ul li::after {
   width: 0; }
   @media (max-width: 767px) {

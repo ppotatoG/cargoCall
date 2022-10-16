@@ -5,8 +5,6 @@ const compareAnimation = () => {
 
     section.style.height = `${list.length}00vh`;
 
-    // console.log(rect.height - window.innerHeight)
-
     if(rect.top < 0 && Math.abs(rect.top) < rect.height) {
         const percent = Math.ceil(Math.abs(rect.top) / rect.height * 100);
         const curIndex = Math.floor(percent / (100 / list.length))

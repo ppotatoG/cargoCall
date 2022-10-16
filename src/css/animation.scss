@@ -76,7 +76,7 @@
             padding: 20px 0;
             transition: top .2s;
             @include mobile {
-                top: 0;
+                top: 10vh;
             }
         }
 
