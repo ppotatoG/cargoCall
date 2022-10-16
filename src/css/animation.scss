@@ -37,20 +37,6 @@
 
 .section {
     &-sub {
-        //height: 200vh;
-        //display: block;
-        //position: relative;
-        //h2 {
-        //    position: fixed;
-        //    top: 45%;
-        //    left: 0;
-        //    width: 100%;
-        //    opacity: 0;
-        //    transform: translateY(20px);
-        //    &:nth-of-type(2) {
-        //        top: 55%;
-        //    }
-        //}
         h2 {
             opacity: 0;
             transform: translateY(40px);
@@ -101,16 +87,16 @@
                                 *:nth-child(n + 2) {
                                     animation: {
                                         name: onlyOneShow;
-                                        delay: #{($i - 1) * 2 + .8}s;
-                                        duration: .4s;
+                                        delay: #{$i - 1 + .4}s;
+                                        duration: .2s;
                                         fill-mode: forwards;
                                     }
                                 }
                                 &::before {
                                     animation: {
                                         name: onlyOnePseudo;
-                                        delay: #{($i - 1) * 2}s;
-                                        duration: .8s;
+                                        delay: #{$i - 1}s;
+                                        duration: .4s;
                                         timing-function: linear;
                                         fill-mode: forwards;
                                     }
@@ -121,8 +107,8 @@
                                 &::after {
                                     animation: {
                                         name: onlyOnePseudo;
-                                        delay: #{($i - 1) * 2 + 1.2}s;
-                                        duration: .8s;
+                                        delay: #{$i - 1 + .6}s;
+                                        duration: .4s;
                                         timing-function: linear;
                                         fill-mode: forwards;
                                     }

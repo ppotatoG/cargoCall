@@ -31,6 +31,12 @@
 }
 
 @keyframes onlyOneShow {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
     100% {
         visibility: visible;
     }
