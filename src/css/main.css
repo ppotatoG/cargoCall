@@ -522,8 +522,8 @@
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
-          height: 100vh; }
+          width: 100vw;
+          height: 80vh; }
           .section-compare .inner ul.label li {
             flex: 1 1 100%; }
             .section-compare .inner ul.label li p {

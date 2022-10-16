@@ -51,7 +51,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" data-observer="true">
         <h2>
             배차시 일어나는 다양한 이슈
             <b><span class="point">카</span><span class="point">고</span><span class="point">콜</span>이</b>
@@ -59,15 +59,15 @@
         </h2>
     </main>
 
-    <section class="section section-sub js-test">
+    <section class="section section-sub" data-observer="true">
         <h2><b>두명</b>이 할 일을 <b>한 명</b>이</h2>
         <h2><b>한 시간</b>할 일을 <b>십 분</b>만에</h2>
     </section>
 
-    <section class="section section-how-price">
+    <section class="section section-how-price" data-observer="true">
         <h2>합리적인 가격을 만드는 방법</h2>
 
-        <article class="article article-only_one">
+        <article class="article article-only_one" data-observer="true">
             <h3>화주와 기사 사이의 단 하나뿐인 매개체</h3>
             <ul>
                 <li class="cargo_owner">
@@ -88,7 +88,7 @@
             </ul>
         </article>
 
-        <article class="article article-optimization">
+        <article class="article article-optimization" data-observer="true">
             <h3>빅데이터를 활용한 최적화된 기사 배정</h3>
             <div class="inner">
                 <ul>
@@ -102,7 +102,7 @@
             </div>
         </article>
 
-        <article class="article article-stable_route">
+        <article class="article article-stable_route" data-observer="true">
             <h3>북한빼고 다 가는 안정적인 노선 보유</h3>
             <div class="inner">
                 <img src="src/image/map.jpg" alt="안정적인 노선 보유">
@@ -120,7 +120,7 @@
         </article>
     </section>
 
-    <section class="section section-comfortable">
+    <section class="section section-comfortable" data-observer="true">
         <h2>고객 업무가 편해지는 이유</h2>
         <div class="text_box">
             <ul>
@@ -134,7 +134,11 @@
         <img src="src/image/counselor.png" alt="고객 업무가 편해지는 이유">
     </section>
 
-    <section class="section section-compare observer">
+    <section class="section section-compare observer"
+             data-observer="true"
+             data-observer-callback="true"
+             data-observer-fuc-name="compareAnimation"
+    >
         <div class="inner">
             <ul class="title">
                 <li><h3>기존 운송사</h3></li>
@@ -200,7 +204,7 @@
         </div>
     </section>
 
-    <section class="section section-sub">
+    <section class="section section-sub" data-observer="true">
         <h2>줄어드는 배차스트레스</h2>
         <h2>카고콜이 <b>약속</b>합니다</h2>
     </section>
@@ -238,6 +242,6 @@
     </footer>
 </div>
 
-<script src="src/js/main.js"></script>
+<script src="src/js/animation.js"></script>
 </body>
 </html>

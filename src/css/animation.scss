@@ -2,7 +2,7 @@
 @import "responsive";
 @import "keyframes";
 
-.main {
+.main.observerIn {
     position: relative;
     h2 {
         span.point {
@@ -36,7 +36,7 @@
 }
 
 .section {
-    &-sub {
+    &-sub.observerIn {
         h2 {
             opacity: 0;
             transform: translateY(40px);
@@ -51,7 +51,7 @@
             }
         }
     }
-    &-how-price {
+    &-how-price.observerIn {
         h2 {
             position: sticky;
             top: 80px;
@@ -65,88 +65,8 @@
                 top: 10vh;
             }
         }
-
-        .article {
-            &-only_one {
-                ul {
-                    li {
-                        &::before,
-                        &::after {
-                            width: 0;
-                            @include mobile {
-                                width: 2px;
-                                height: 0;
-                            }
-                        }
-                        > *:nth-child(n + 2) {
-                            visibility: hidden;
-                        }
-
-                        @for $i from 1 to 4 {
-                            &:nth-of-type(#{$i}) {
-                                *:nth-child(n + 2) {
-                                    animation: {
-                                        name: onlyOneShow;
-                                        delay: #{$i - 1 + .4}s;
-                                        duration: .2s;
-                                        fill-mode: forwards;
-                                    }
-                                }
-                                &::before {
-                                    animation: {
-                                        name: onlyOnePseudo;
-                                        delay: #{$i - 1}s;
-                                        duration: .4s;
-                                        timing-function: linear;
-                                        fill-mode: forwards;
-                                    }
-                                    @include mobile {
-                                        animation-name: onlyOnePseudoMobile;
-                                    }
-                                }
-                                &::after {
-                                    animation: {
-                                        name: onlyOnePseudo;
-                                        delay: #{$i - 1 + .6}s;
-                                        duration: .4s;
-                                        timing-function: linear;
-                                        fill-mode: forwards;
-                                    }
-                                    @include mobile {
-                                        animation-name: onlyOnePseudoMobile;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            &-optimization {
-                ul {
-                    z-index: 1;
-                    transform: translateX(-60px);
-                    opacity: 0;
-                    animation: {
-                        name: transformX;
-                        delay: 1s;
-                        duration: .8s;
-                        fill-mode: forwards;
-                    }
-                }
-                img {
-                    transform: translateY(-60px);
-                    opacity: 0;
-                    animation: {
-                        name: transformY;
-                        delay: .5s;
-                        duration: .8s;
-                        fill-mode: forwards;
-                    }
-                }
-            }
-        }
     }
-    &-comfortable {
+    &-comfortable.observerIn {
         .text_box {
             li {
                 transform: translateX(-50px);
@@ -168,10 +88,10 @@
         @include mobile {
             .inner {
                 position: sticky;
-                top: 0;
+                top: 10vh;
                 bottom: 0;
                 left: 0;
-                @include size(100vw, 100vh);
+                @include size(100vw, 90vh);
                 background: repeating-linear-gradient(
                     to bottom,
                     #fff,
@@ -197,4 +117,82 @@
     }
 }
 
+.article {
+    &-only_one.observerIn {
+        ul {
+            li {
+                &::before,
+                &::after {
+                    width: 0;
+                    @include mobile {
+                        width: 2px;
+                        height: 0;
+                    }
+                }
+                > *:nth-child(n + 2) {
+                    visibility: hidden;
+                }
 
+                @for $i from 1 to 4 {
+                    &:nth-of-type(#{$i}) {
+                        *:nth-child(n + 2) {
+                            animation: {
+                                name: onlyOneShow;
+                                delay: #{$i - 1 + .4}s;
+                                duration: .2s;
+                                fill-mode: forwards;
+                            }
+                        }
+                        &::before {
+                            animation: {
+                                name: onlyOnePseudo;
+                                delay: #{$i - 1}s;
+                                duration: .4s;
+                                timing-function: linear;
+                                fill-mode: forwards;
+                            }
+                            @include mobile {
+                                animation-name: onlyOnePseudoMobile;
+                            }
+                        }
+                        &::after {
+                            animation: {
+                                name: onlyOnePseudo;
+                                delay: #{$i - 1 + .6}s;
+                                duration: .4s;
+                                timing-function: linear;
+                                fill-mode: forwards;
+                            }
+                            @include mobile {
+                                animation-name: onlyOnePseudoMobile;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-optimization.observerIn {
+        ul {
+            z-index: 1;
+            transform: translateX(-60px);
+            opacity: 0;
+            animation: {
+                name: transformX;
+                delay: 1s;
+                duration: .8s;
+                fill-mode: forwards;
+            }
+        }
+        img {
+            transform: translateY(-60px);
+            opacity: 0;
+            animation: {
+                name: transformY;
+                delay: .5s;
+                duration: .8s;
+                fill-mode: forwards;
+            }
+        }
+    }
+}

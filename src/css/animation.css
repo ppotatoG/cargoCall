@@ -23,9 +23,9 @@
   100% {
     transform: translateX(0);
     opacity: 1; } }
-.main {
+.main.observerIn {
   position: relative; }
-  .main h2 span.point {
+  .main.observerIn h2 span.point {
     display: inline-block;
     text-shadow: 0 1px 0 #fff, 0 2px 0 #fff, 0 3px 0 #fff, 0 4px 0 #fff, 0 5px 0 #fff, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
     animation-name: mainDung;
@@ -34,21 +34,21 @@
     animation-timing-function: ease;
     animation-iteration-count: 2;
     animation-direction: alternate; }
-    .main h2 span.point:nth-of-type(2) {
+    .main.observerIn h2 span.point:nth-of-type(2) {
       animation-delay: 0.6s; }
-    .main h2 span.point:nth-of-type(3) {
+    .main.observerIn h2 span.point:nth-of-type(3) {
       animation-delay: 0.7s; }
 
-.section-sub h2 {
+.section-sub.observerIn h2 {
   opacity: 0;
   transform: translateY(40px);
   animation-name: transformY;
   animation-delay: .5s;
   animation-duration: 1s;
   animation-fill-mode: forwards; }
-  .section-sub h2:nth-of-type(2) {
+  .section-sub.observerIn h2:nth-of-type(2) {
     animation-delay: 1s; }
-.section-how-price h2 {
+.section-how-price.observerIn h2 {
   position: sticky;
   top: 80px;
   left: 0;
@@ -58,124 +58,32 @@
   padding: 20px 0;
   transition: top .2s; }
   @media (max-width: 767px) {
-    .section-how-price h2 {
+    .section-how-price.observerIn h2 {
       top: 10vh; } }
-.section-how-price .article-only_one ul li::before, .section-how-price .article-only_one ul li::after {
-  width: 0; }
-  @media (max-width: 767px) {
-    .section-how-price .article-only_one ul li::before, .section-how-price .article-only_one ul li::after {
-      width: 2px;
-      height: 0; } }
-.section-how-price .article-only_one ul li > *:nth-child(n + 2) {
-  visibility: hidden; }
-.section-how-price .article-only_one ul li:nth-of-type(1) *:nth-child(n + 2) {
-  animation-name: onlyOneShow;
-  animation-delay: 0.4s;
-  animation-duration: .2s;
-  animation-fill-mode: forwards; }
-.section-how-price .article-only_one ul li:nth-of-type(1)::before {
-  animation-name: onlyOnePseudo;
-  animation-delay: 0s;
-  animation-duration: .4s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards; }
-  @media (max-width: 767px) {
-    .section-how-price .article-only_one ul li:nth-of-type(1)::before {
-      animation-name: onlyOnePseudoMobile; } }
-.section-how-price .article-only_one ul li:nth-of-type(1)::after {
-  animation-name: onlyOnePseudo;
-  animation-delay: 0.6s;
-  animation-duration: .4s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards; }
-  @media (max-width: 767px) {
-    .section-how-price .article-only_one ul li:nth-of-type(1)::after {
-      animation-name: onlyOnePseudoMobile; } }
-.section-how-price .article-only_one ul li:nth-of-type(2) *:nth-child(n + 2) {
-  animation-name: onlyOneShow;
-  animation-delay: 1.4s;
-  animation-duration: .2s;
-  animation-fill-mode: forwards; }
-.section-how-price .article-only_one ul li:nth-of-type(2)::before {
-  animation-name: onlyOnePseudo;
-  animation-delay: 1s;
-  animation-duration: .4s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards; }
-  @media (max-width: 767px) {
-    .section-how-price .article-only_one ul li:nth-of-type(2)::before {
-      animation-name: onlyOnePseudoMobile; } }
-.section-how-price .article-only_one ul li:nth-of-type(2)::after {
-  animation-name: onlyOnePseudo;
-  animation-delay: 1.6s;
-  animation-duration: .4s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards; }
-  @media (max-width: 767px) {
-    .section-how-price .article-only_one ul li:nth-of-type(2)::after {
-      animation-name: onlyOnePseudoMobile; } }
-.section-how-price .article-only_one ul li:nth-of-type(3) *:nth-child(n + 2) {
-  animation-name: onlyOneShow;
-  animation-delay: 2.4s;
-  animation-duration: .2s;
-  animation-fill-mode: forwards; }
-.section-how-price .article-only_one ul li:nth-of-type(3)::before {
-  animation-name: onlyOnePseudo;
-  animation-delay: 2s;
-  animation-duration: .4s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards; }
-  @media (max-width: 767px) {
-    .section-how-price .article-only_one ul li:nth-of-type(3)::before {
-      animation-name: onlyOnePseudoMobile; } }
-.section-how-price .article-only_one ul li:nth-of-type(3)::after {
-  animation-name: onlyOnePseudo;
-  animation-delay: 2.6s;
-  animation-duration: .4s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards; }
-  @media (max-width: 767px) {
-    .section-how-price .article-only_one ul li:nth-of-type(3)::after {
-      animation-name: onlyOnePseudoMobile; } }
-.section-how-price .article-optimization ul {
-  z-index: 1;
-  transform: translateX(-60px);
-  opacity: 0;
-  animation-name: transformX;
-  animation-delay: 1s;
-  animation-duration: .8s;
-  animation-fill-mode: forwards; }
-.section-how-price .article-optimization img {
-  transform: translateY(-60px);
-  opacity: 0;
-  animation-name: transformY;
-  animation-delay: .5s;
-  animation-duration: .8s;
-  animation-fill-mode: forwards; }
-.section-comfortable .text_box li {
+.section-comfortable.observerIn .text_box li {
   transform: translateX(-50px);
   opacity: 0;
   animation-name: transformX;
   animation-duration: .2s;
   animation-fill-mode: forwards; }
-  .section-comfortable .text_box li:nth-of-type(1) {
+  .section-comfortable.observerIn .text_box li:nth-of-type(1) {
     animation-delay: 0.5s; }
-  .section-comfortable .text_box li:nth-of-type(2) {
+  .section-comfortable.observerIn .text_box li:nth-of-type(2) {
     animation-delay: 1s; }
-  .section-comfortable .text_box li:nth-of-type(3) {
+  .section-comfortable.observerIn .text_box li:nth-of-type(3) {
     animation-delay: 1.5s; }
-  .section-comfortable .text_box li:nth-of-type(4) {
+  .section-comfortable.observerIn .text_box li:nth-of-type(4) {
     animation-delay: 2s; }
-  .section-comfortable .text_box li:nth-of-type(5) {
+  .section-comfortable.observerIn .text_box li:nth-of-type(5) {
     animation-delay: 2.5s; }
 @media (max-width: 767px) {
   .section-compare .inner {
     position: sticky;
-    top: 0;
+    top: 10vh;
     bottom: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background: repeating-linear-gradient(to bottom, #fff, #fff 50%, #41CC93 50%, #41CC93 100%); }
   .section-compare .text_contents li {
     opacity: 0;
@@ -185,5 +93,98 @@
     .section-compare .text_contents.observer li {
       opacity: 1;
       transform: translateY(-10px); } }
+
+.article-only_one.observerIn ul li::before, .article-only_one.observerIn ul li::after {
+  width: 0; }
+  @media (max-width: 767px) {
+    .article-only_one.observerIn ul li::before, .article-only_one.observerIn ul li::after {
+      width: 2px;
+      height: 0; } }
+.article-only_one.observerIn ul li > *:nth-child(n + 2) {
+  visibility: hidden; }
+.article-only_one.observerIn ul li:nth-of-type(1) *:nth-child(n + 2) {
+  animation-name: onlyOneShow;
+  animation-delay: 0.4s;
+  animation-duration: .2s;
+  animation-fill-mode: forwards; }
+.article-only_one.observerIn ul li:nth-of-type(1)::before {
+  animation-name: onlyOnePseudo;
+  animation-delay: 0s;
+  animation-duration: .4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .article-only_one.observerIn ul li:nth-of-type(1)::before {
+      animation-name: onlyOnePseudoMobile; } }
+.article-only_one.observerIn ul li:nth-of-type(1)::after {
+  animation-name: onlyOnePseudo;
+  animation-delay: 0.6s;
+  animation-duration: .4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .article-only_one.observerIn ul li:nth-of-type(1)::after {
+      animation-name: onlyOnePseudoMobile; } }
+.article-only_one.observerIn ul li:nth-of-type(2) *:nth-child(n + 2) {
+  animation-name: onlyOneShow;
+  animation-delay: 1.4s;
+  animation-duration: .2s;
+  animation-fill-mode: forwards; }
+.article-only_one.observerIn ul li:nth-of-type(2)::before {
+  animation-name: onlyOnePseudo;
+  animation-delay: 1s;
+  animation-duration: .4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .article-only_one.observerIn ul li:nth-of-type(2)::before {
+      animation-name: onlyOnePseudoMobile; } }
+.article-only_one.observerIn ul li:nth-of-type(2)::after {
+  animation-name: onlyOnePseudo;
+  animation-delay: 1.6s;
+  animation-duration: .4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .article-only_one.observerIn ul li:nth-of-type(2)::after {
+      animation-name: onlyOnePseudoMobile; } }
+.article-only_one.observerIn ul li:nth-of-type(3) *:nth-child(n + 2) {
+  animation-name: onlyOneShow;
+  animation-delay: 2.4s;
+  animation-duration: .2s;
+  animation-fill-mode: forwards; }
+.article-only_one.observerIn ul li:nth-of-type(3)::before {
+  animation-name: onlyOnePseudo;
+  animation-delay: 2s;
+  animation-duration: .4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .article-only_one.observerIn ul li:nth-of-type(3)::before {
+      animation-name: onlyOnePseudoMobile; } }
+.article-only_one.observerIn ul li:nth-of-type(3)::after {
+  animation-name: onlyOnePseudo;
+  animation-delay: 2.6s;
+  animation-duration: .4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+  @media (max-width: 767px) {
+    .article-only_one.observerIn ul li:nth-of-type(3)::after {
+      animation-name: onlyOnePseudoMobile; } }
+.article-optimization.observerIn ul {
+  z-index: 1;
+  transform: translateX(-60px);
+  opacity: 0;
+  animation-name: transformX;
+  animation-delay: 1s;
+  animation-duration: .8s;
+  animation-fill-mode: forwards; }
+.article-optimization.observerIn img {
+  transform: translateY(-60px);
+  opacity: 0;
+  animation-name: transformY;
+  animation-delay: .5s;
+  animation-duration: .8s;
+  animation-fill-mode: forwards; }
 
 /*# sourceMappingURL=animation.css.map */
