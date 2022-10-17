@@ -34,16 +34,45 @@ const compareAnimation = () => {
     }
 }
 
+let isGifRunning = false;
+const mapImg = document.querySelector('.map_img');
+const changeGif = () => {
+    const originalSrc = mapImg.src;
+
+    if (!isGifRunning) {
+        mapImg.src = originalSrc.replace(/jpg/, 'gif');
+        isGifRunning = true;
+
+        setTimeout(() => {
+            mapImg.src = originalSrc;
+            isGifRunning = false;
+        }, 3000);
+    }
+}
+
 const setThreshold = isMobile ? 0 : .2;
 const io = new IntersectionObserver((entries, ob) => {
     entries.forEach(entry => {
         const target = entry.target;
 
-        if (Boolean(target.dataset.observerCallback) && isMobile) {
-            if (entry.isIntersecting) {
-                window.addEventListener('scroll', compareAnimation);
-            } else {
-                window.removeEventListener('scroll', compareAnimation);
+        if (Boolean(target.dataset.observerCallback)) {
+            switch (target.dataset.observerFucName) {
+                case 'changeGif':
+                    target.classList.add('observerIn');
+                    setTimeout(() => changeGif(), 2500);
+                    ob.unobserve(entry.target);
+                    break;
+                case 'compareAnimation':
+                    if (isMobile) {
+                        if (entry.isIntersecting) {
+                            window.addEventListener('scroll', compareAnimation);
+                        } else {
+                            window.removeEventListener('scroll', compareAnimation);
+                        }
+                    } else {
+                        return false;
+                    }
+                    break;
             }
         }
 
@@ -59,5 +88,7 @@ const sections = document.querySelectorAll('[data-observer="true"]');
 (() => {
     sections.forEach((el) => {
         io.observe(el);
-    })
+    });
+
+    mapImg.addEventListener('click', e => changeGif(e.target));
 })();
