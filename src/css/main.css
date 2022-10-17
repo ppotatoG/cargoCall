@@ -8,7 +8,8 @@
       line-height: 1; } }
   .main h2, .section-sub h2 {
     color: #009340;
-    font-weight: 400; }
+    font-weight: 400;
+    word-break: keep-all; }
     .main h2 b, .section-sub h2 b,
     .main h2 span,
     .section-sub h2 span {
@@ -250,24 +251,21 @@
       gap: 50px; }
       @media (max-width: 767px) {
         .section-how-price .article-stable_route .inner .text_box {
-          flex-direction: column-reverse;
-          top: auto;
-          bottom: 20%;
-          right: 4%;
-          gap: 10%; } }
+          position: initial;
+          width: 90%;
+          margin: 0 auto;
+          gap: 4vw; } }
       .section-how-price .article-stable_route .inner .text_box p {
         color: #4A95F1;
         font-size: 40px;
         text-align: right; }
         @media (max-width: 767px) {
           .section-how-price .article-stable_route .inner .text_box p {
-            text-align: right;
-            text-shadow: 0 0 5px #fff;
-            font-size: x-large;
-            font-weight: 800;
             box-sizing: border-box;
             padding: 0;
-            -webkit-text-stroke: 1px #fff; } }
+            text-align: center;
+            font-size: x-large;
+            font-weight: 800; } }
         .section-how-price .article-stable_route .inner .text_box p b {
           font-size: 1.2em;
           color: #DA1F26; }
@@ -495,13 +493,13 @@
             .section-compare .inner ul.title li h3 {
               margin: 0;
               flex-direction: row-reverse;
-              height: 15vh;
+              height: 12vh;
               gap: 2vw; }
             .section-compare .inner ul.title li:nth-of-type(2) {
               top: 50vh; }
         .section-compare .inner ul.text_contents li {
           position: absolute;
-          top: 15vh;
+          top: 12vh;
           z-index: 9;
           box-sizing: border-box;
           height: 30vh;
@@ -512,7 +510,7 @@
           .section-compare .inner ul.text_contents li::before {
             top: 12vw; }
           .section-compare .inner ul.text_contents li:nth-of-type(2) {
-            top: 65vh;
+            top: 62vh;
             padding: 10vw 8vw 0 12vw;
             text-align: left; }
             .section-compare .inner ul.text_contents li:nth-of-type(2) p {
@@ -525,9 +523,11 @@
           width: 100vw;
           height: 80vh; }
           .section-compare .inner ul.label li {
-            flex: 1 1 100%; }
+            width: 100%; }
             .section-compare .inner ul.label li p {
-              margin: 42vh auto 0; }
+              margin: 44vh 4vw 0 auto;
+              padding: 2vw 4vw;
+              text-align: center; }
         .section-compare .inner .logo {
           display: none; } }
 
