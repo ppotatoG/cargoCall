@@ -175,12 +175,6 @@ button {
               .header .nav ul .menu_btn a span.bar03 {
                 transform: translateY(6px);
                 animation-delay: 250ms; }
-          .header .nav ul .menu_btn.js-toggle-on span.bar01 {
-            transform: rotate(40deg); }
-          .header .nav ul .menu_btn.js-toggle-on span.bar02 {
-            opacity: 0; }
-          .header .nav ul .menu_btn.js-toggle-on span.bar03 {
-            transform: rotate(-40deg); }
         .header .nav ul .login_btn {
           position: absolute;
           top: 10vh;
@@ -220,7 +214,13 @@ button {
       .header.menuView .nav ul.js-menu {
         left: 0;
         width: 100vw;
-        opacity: 1; } }
+        opacity: 1; }
+      .header.menuView .nav ul li a span.bar01 {
+        transform: rotate(40deg); }
+      .header.menuView .nav ul li a span.bar02 {
+        opacity: 0; }
+      .header.menuView .nav ul li a span.bar03 {
+        transform: rotate(-40deg); } }
   .header .inner {
     max-width: 1000px;
     margin: 0 auto;

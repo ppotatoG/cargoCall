@@ -56,19 +56,6 @@
                             }
                         }
                     }
-                    &.js-toggle-on {
-                        span {
-                            &.bar01 {
-                                transform: rotate(40deg);
-                            }
-                            &.bar02 {
-                                opacity: 0;
-                            }
-                            &.bar03 {
-                                transform: rotate(-40deg);
-                            }
-                        }
-                    }
                 }
                 .login_btn {
                     position: absolute;
@@ -95,6 +82,20 @@
             .nav ul .login_btn,
             .nav ul.js-menu {
                 @include menuBoxOn;
+            }
+
+            .nav ul li a {
+                span {
+                    &.bar01 {
+                        transform: rotate(40deg);
+                    }
+                    &.bar02 {
+                        opacity: 0;
+                    }
+                    &.bar03 {
+                        transform: rotate(-40deg);
+                    }
+                }
             }
         }
     }
