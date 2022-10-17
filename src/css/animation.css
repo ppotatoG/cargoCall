@@ -39,8 +39,9 @@
     .main.observerIn h2 span.point:nth-of-type(3) {
       animation-delay: 0.7s; }
 
+.section-sub h2 {
+  opacity: 0; }
 .section-sub.observerIn h2 {
-  opacity: 0;
   transform: translateY(40px);
   animation-name: transformY;
   animation-delay: .5s;
@@ -60,9 +61,10 @@
   @media (max-width: 767px) {
     .section-how-price.observerIn h2 {
       top: 10vh; } }
+.section-comfortable .text_box li {
+  opacity: 0; }
 .section-comfortable.observerIn .text_box li {
   transform: translateX(-50px);
-  opacity: 0;
   animation-name: transformX;
   animation-duration: .2s;
   animation-fill-mode: forwards; }
@@ -94,6 +96,17 @@
       opacity: 1;
       transform: translateY(-10px); } }
 
+.article h3,
+.article .inner > * {
+  opacity: 0; }
+.article.observerIn h3 {
+  transform: translateX(50px);
+  opacity: 0;
+  animation-name: transformX;
+  animation-duration: .4s;
+  animation-fill-mode: forwards; }
+.article.observerIn:nth-of-type(even) h3 {
+  transform: translateX(-50px); }
 .article-only_one.observerIn ul li::before, .article-only_one.observerIn ul li::after {
   width: 0; }
   @media (max-width: 767px) {
@@ -171,20 +184,40 @@
   @media (max-width: 767px) {
     .article-only_one.observerIn ul li:nth-of-type(3)::after {
       animation-name: onlyOnePseudoMobile; } }
+.article-optimization.observerIn h3 {
+  padding-bottom: 0; }
+.article-optimization.observerIn img {
+  transform: translateY(-60px);
+  animation-name: transformY;
+  animation-delay: .8s;
+  animation-duration: .8s;
+  animation-fill-mode: forwards; }
 .article-optimization.observerIn ul {
   z-index: 1;
   transform: translateX(-60px);
-  opacity: 0;
   animation-name: transformX;
-  animation-delay: 1s;
+  animation-delay: 1.2s;
   animation-duration: .8s;
   animation-fill-mode: forwards; }
-.article-optimization.observerIn img {
-  transform: translateY(-60px);
-  opacity: 0;
-  animation-name: transformY;
-  animation-delay: .5s;
+.article-stable_route .text_box {
+  opacity: 1; }
+  .article-stable_route .text_box p {
+    opacity: 0; }
+.article-stable_route.observerIn img {
+  transform: translateX(60px);
+  animation-name: transformX;
+  animation-delay: .8s;
   animation-duration: .8s;
   animation-fill-mode: forwards; }
+.article-stable_route.observerIn .text_box {
+  opacity: 1; }
+  .article-stable_route.observerIn .text_box p {
+    transform: translateX(60px);
+    animation-name: transformX;
+    animation-delay: 1.2s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards; }
+    .article-stable_route.observerIn .text_box p:nth-of-type(2) {
+      animation-delay: 1.6s; }
 
 /*# sourceMappingURL=animation.css.map */

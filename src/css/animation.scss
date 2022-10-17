@@ -36,18 +36,22 @@
 }
 
 .section {
-    &-sub.observerIn {
+    &-sub {
         h2 {
             opacity: 0;
-            transform: translateY(40px);
-            animation: {
-                name: transformY;
-                delay: .5s;
-                duration: 1s;
-                fill-mode: forwards;
-            }
-            &:nth-of-type(2) {
-                animation-delay: 1s;
+        }
+        &.observerIn {
+            h2 {
+                transform: translateY(40px);
+                animation: {
+                    name: transformY;
+                    delay: .5s;
+                    duration: 1s;
+                    fill-mode: forwards;
+                }
+                &:nth-of-type(2) {
+                    animation-delay: 1s;
+                }
             }
         }
     }
@@ -66,19 +70,23 @@
             }
         }
     }
-    &-comfortable.observerIn {
-        .text_box {
-            li {
-                transform: translateX(-50px);
-                opacity: 0;
-                animation: {
-                    name: transformX;
-                    duration: .2s;
-                    fill-mode: forwards;
-                }
-                @for $i from 1 to 6 {
-                    &:nth-of-type(#{$i}) {
-                        animation-delay: #{$i *.5}s;
+    &-comfortable {
+        .text_box li {
+            opacity: 0;
+        }
+        &.observerIn {
+            .text_box {
+                li {
+                    transform: translateX(-50px);
+                    animation: {
+                        name: transformX;
+                        duration: .2s;
+                        fill-mode: forwards;
+                    }
+                    @for $i from 1 to 6 {
+                        &:nth-of-type(#{$i}) {
+                            animation-delay: #{$i *.5}s;
+                        }
                     }
                 }
             }
@@ -118,6 +126,25 @@
 }
 
 .article {
+    h3,
+    .inner > *{
+        opacity: 0;
+    }
+    &.observerIn {
+        h3 {
+            transform: translateX(50px);
+            opacity: 0;
+            animation: {
+                name: transformX;
+                duration: .4s;
+                fill-mode: forwards;
+            }
+        }
+        &:nth-of-type(even) h3 {
+            transform: translateX(-50px);
+        }
+    }
+
     &-only_one.observerIn {
         ul {
             li {
@@ -172,26 +199,65 @@
             }
         }
     }
-    &-optimization.observerIn {
-        ul {
-            z-index: 1;
-            transform: translateX(-60px);
-            opacity: 0;
-            animation: {
-                name: transformX;
-                delay: 1s;
-                duration: .8s;
-                fill-mode: forwards;
+    &-optimization {
+        &.observerIn {
+            h3 {
+                padding-bottom: 0;
+            }
+            img {
+                transform: translateY(-60px);
+                animation: {
+                    name: transformY;
+                    delay: .8s;
+                    duration: .8s;
+                    fill-mode: forwards;
+                }
+            }
+            ul {
+                z-index: 1;
+                transform: translateX(-60px);
+                animation: {
+                    name: transformX;
+                    delay: 1.2s;
+                    duration: .8s;
+                    fill-mode: forwards;
+                }
             }
         }
-        img {
-            transform: translateY(-60px);
-            opacity: 0;
-            animation: {
-                name: transformY;
-                delay: .5s;
-                duration: .8s;
-                fill-mode: forwards;
+    }
+    &-stable_route {
+        .text_box {
+            opacity: 1;
+            p {
+                opacity: 0;
+            }
+        }
+        &.observerIn {
+            img {
+                transform: translateX(60px);
+                animation: {
+                    name: transformX;
+                    delay: .8s;
+                    duration: .8s;
+                    fill-mode: forwards;
+                }
+            }
+
+            .text_box {
+                opacity: 1;
+                p {
+                    transform: translateX(60px);
+                    animation: {
+                        name: transformX;
+                        delay: 1.2s;
+                        duration: .8s;
+                        fill-mode: forwards;
+                    }
+
+                    &:nth-of-type(2) {
+                        animation-delay: 1.6s;
+                    }
+                }
             }
         }
     }
