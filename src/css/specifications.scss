@@ -5,9 +5,15 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 80px 0;
+    @include mobile {
+        padding: 5vh 0;
+    }
     .exam_img {
         max-width: 600px;
         margin: 0 auto;
+        @include mobile {
+            max-width: 90%;
+        }
     }
     &__item {
         text-align: center;
@@ -21,6 +27,13 @@
             border-bottom: none;
         }
         @include flex($g: 20px);
+        @include mobile {
+            width: 90%;
+            margin: 0 auto;
+            padding: 4vh 0;
+            flex-direction: column;
+            gap: 0;
+        }
         .sub_title {
             flex: 0 0 150px;
             flex-direction: column;
@@ -34,6 +47,9 @@
                 background: $point-color;
                 color: #fff;
                 border-radius: 20px;
+                @include mobile {
+                    width: 90%;
+                }
             }
         }
         .graph {
@@ -46,9 +62,23 @@
                 radius: 20px;
             }
             @include flex;
+            @include mobile {
+                flex-wrap: wrap;
+            }
             li {
                 flex: 1 1;
                 padding: 10px 0;
+                @include mobile {
+                    flex: 1 1 50%;
+                    border-bottom: {
+                        style: solid;
+                        width: 1px;
+                        color: #eee;
+                    }
+                    &:nth-of-type(n+6) {
+                        border: none;
+                    }
+                }
                 &:nth-of-type(odd) {
                     background: #eee;
                 }
