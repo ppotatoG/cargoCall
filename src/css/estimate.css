@@ -1,0 +1,181 @@
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0; }
+
+.process h2 {
+  font-size: 30px;
+  color: #1E5DC1;
+  text-align: center; }
+.process__item {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0; }
+  .process__item li {
+    flex: 0 0 .33%;
+    padding: 40px;
+    box-sizing: border-box;
+    border-top-color: #1E5DC1;
+    border-top-width: 1px;
+    border-top-style: solid; }
+    .process__item li:nth-of-type(2) {
+      position: relative; }
+      .process__item li:nth-of-type(2)::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #1E5DC1;
+        width: 1px;
+        height: 100px; }
+      .process__item li:nth-of-type(2)::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #1E5DC1;
+        width: 1px;
+        height: 100px; }
+      .process__item li:nth-of-type(2) h3::before {
+        content: '2'; }
+      .process__item li:nth-of-type(2) .icon_img {
+        background-position-x: 50%; }
+    .process__item li:nth-of-type(3) h3::before {
+      content: '3'; }
+    .process__item li:nth-of-type(3) .icon_img {
+      background-position-x: 100%; }
+    .process__item li h3 {
+      color: #1E5DC1;
+      font-size: 30px;
+      font-family: 'Black Han Sans', sans-serif;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px; }
+      .process__item li h3::before {
+        content: '1';
+        padding: 5px;
+        background: #1E5DC1;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        width: 30px;
+        height: 30px; }
+    .process__item li .icon_img {
+      margin: 20px auto;
+      background-size: 300%;
+      background-repeat: no-repeat;
+      background-image: url("../image/estimate.png");
+      width: 250px;
+      height: 233px; }
+    .process__item li p {
+      text-align: center; }
+.process .time {
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  color: #1E5DC1; }
+  .process .time::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    background: #1E5DC1;
+    width: 40%;
+    height: 2px; }
+  .process .time::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    background: #1E5DC1;
+    width: 40%;
+    height: 2px; }
+
+.estimate .title {
+  margin-bottom: 50px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #1E5DC1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px; }
+  .estimate .title h2 {
+    color: #1E5DC1;
+    font-size: 80px;
+    padding: 10px 30px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #1E5DC1;
+    font-family: 'Black Han Sans', sans-serif; }
+  .estimate .title p {
+    font-size: 24px; }
+    .estimate .title p b {
+      color: #1E5DC1; }
+.estimate form {
+  background: #eee;
+  padding: 50px; }
+  .estimate form .flex_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; }
+    .estimate form .flex_wrap label {
+      flex: 0 0 calc(50% - 10px);
+      padding: 5px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px; }
+      .estimate form .flex_wrap label span {
+        flex: 0 0 80px; }
+      .estimate form .flex_wrap label input {
+        flex: 1 1;
+        background: #fff;
+        padding: 10px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #1E5DC1;
+        border-radius: 20px; }
+  .estimate form button {
+    flex: 1 1 100%;
+    background: #1E5DC1;
+    color: #fff;
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto; }
+  .estimate form p {
+    margin: 40px 0;
+    text-align: center; }
+
+.advertising_copy {
+  max-width: 100vw;
+  padding: 80px 0;
+  background: #1E5DC1; }
+  .advertising_copy > * {
+    width: 1000px;
+    margin: 0 auto;
+    color: #fff; }
+  .advertising_copy h2 {
+    font-size: 60px;
+    word-break: keep-all;
+    font-family: 'Black Han Sans', sans-serif; }
+  .advertising_copy a {
+    text-align: right;
+    margin-top: 200px; }
+
+/*# sourceMappingURL=estimate.css.map */
