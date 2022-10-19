@@ -9,7 +9,7 @@ section {
 
 .process h2 {
   font-size: 30px;
-  color: #1E5DC1;
+  color: #41CC93;
   text-align: center; }
 .process__item {
   margin: 20px auto;
@@ -21,7 +21,7 @@ section {
     flex: 0 0 .33%;
     padding: 40px;
     box-sizing: border-box;
-    border-top-color: #1E5DC1;
+    border-top-color: #41CC93;
     border-top-width: 1px;
     border-top-style: solid; }
     .process__item li:nth-of-type(2) {
@@ -32,7 +32,7 @@ section {
         position: absolute;
         top: 0;
         left: 0;
-        background: #1E5DC1;
+        background: #41CC93;
         width: 1px;
         height: 100px; }
       .process__item li:nth-of-type(2)::after {
@@ -41,7 +41,7 @@ section {
         position: absolute;
         top: 0;
         right: 0;
-        background: #1E5DC1;
+        background: #41CC93;
         width: 1px;
         height: 100px; }
       .process__item li:nth-of-type(2) h3::before {
@@ -53,7 +53,7 @@ section {
     .process__item li:nth-of-type(3) .icon_img {
       background-position-x: 100%; }
     .process__item li h3 {
-      color: #1E5DC1;
+      color: #41CC93;
       font-size: 30px;
       font-family: 'Black Han Sans', sans-serif;
       display: flex;
@@ -63,7 +63,7 @@ section {
       .process__item li h3::before {
         content: '1';
         padding: 5px;
-        background: #1E5DC1;
+        background: #41CC93;
         color: #fff;
         border-radius: 50%;
         display: flex;
@@ -90,7 +90,7 @@ section {
         width: 8px; }
       .process__item::-webkit-scrollbar-thumb {
         height: 30%;
-        background: #1E5DC1;
+        background: #41CC93;
         border-radius: 10px; }
       .process__item::-webkit-scrollbar-track {
         background: rgba(33, 122, 244, 0.1); } }
@@ -98,7 +98,7 @@ section {
   text-align: center;
   font-size: 20px;
   position: relative;
-  color: #1E5DC1; }
+  color: #41CC93; }
   @media (min-width: 1024px) {
     .process .time::before {
       display: block;
@@ -106,7 +106,7 @@ section {
       position: absolute;
       top: calc(50% - 1px);
       left: 0;
-      background: #1E5DC1;
+      background: #41CC93;
       width: 40%;
       height: 2px; }
     .process .time::after {
@@ -115,7 +115,7 @@ section {
       position: absolute;
       top: calc(50% - 1px);
       right: 0;
-      background: #1E5DC1;
+      background: #41CC93;
       width: 40%;
       height: 2px; } }
 
@@ -123,23 +123,23 @@ section {
   margin-bottom: 50px;
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #1E5DC1;
+  border-top-color: #41CC93;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 20px; }
   .estimate .title h2 {
-    color: #1E5DC1;
+    color: #41CC93;
     font-size: 80px;
     padding: 10px 30px;
     border-right-style: solid;
     border-right-width: 1px;
-    border-right-color: #1E5DC1;
+    border-right-color: #41CC93;
     font-family: 'Black Han Sans', sans-serif; }
   .estimate .title p {
     font-size: 24px; }
     .estimate .title p b {
-      color: #1E5DC1; }
+      color: #41CC93; }
 .estimate form {
   background: #eee;
   padding: 50px; }
@@ -165,11 +165,11 @@ section {
         padding: 10px;
         border-style: solid;
         border-width: 3px;
-        border-color: #1E5DC1;
+        border-color: #41CC93;
         border-radius: 20px; }
   .estimate form button {
     flex: 1 1 100%;
-    background: #1E5DC1;
+    background: #41CC93;
     color: #fff;
     width: fit-content;
     padding: 10px 40px;
@@ -201,7 +201,7 @@ section {
           flex: 1 1; } }
 
 .advertising_copy {
-  background: #1E5DC1;
+  background: #41CC93;
   max-width: 100vw;
   padding: 80px 0; }
   @media (max-width: 767px) {
