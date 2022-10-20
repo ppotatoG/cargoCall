@@ -15,10 +15,10 @@ section {
   margin: 20px auto;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 0; }
   .process__item li {
-    flex: 0 0 .33%;
+    flex: 0 0 33%;
     padding: 40px;
     box-sizing: border-box;
     border-top-color: #41CC93;
@@ -79,6 +79,10 @@ section {
       background-image: url("../image/estimate-001.png");
       width: 250px;
       height: 233px; }
+      @media (max-width: 767px) {
+        .process__item li .icon_img {
+          width: 180px;
+          height: 200px; } }
     .process__item li p {
       text-align: center; }
   @media (max-width: 767px) {
