@@ -4,10 +4,9 @@
     top: 0;
     left: 0;
     z-index: 9;
-    background: rgba(255, 255, 255, .8);
+    background: #fff;
     box-shadow: 0 0 10px 0 #eee;
     @include mobile {
-        background: #fff;
         padding: 0 2vw;
         box-sizing: border-box;
         .nav {
