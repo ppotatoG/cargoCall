@@ -5,7 +5,8 @@
   @media (max-width: 767px) {
     .main, .section-sub {
       font-size: 3rem;
-      line-height: 1; } }
+      line-height: 1;
+      min-height: 80vh; } }
   .main h2, .section-sub h2 {
     color: #009340;
     font-weight: 400;
