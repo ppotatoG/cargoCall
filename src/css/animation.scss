@@ -21,7 +21,7 @@
             animation: {
                 name: mainDung;
                 delay: .5s;
-                duration: .2s;
+                duration: .1s;
                 timing-function: ease;
                 iteration-count: 2;
                 direction: alternate;
@@ -46,7 +46,7 @@
                 animation: {
                     name: transformY;
                     delay: .5s;
-                    duration: 1s;
+                    duration: .5s;
                     fill-mode: forwards;
                 }
                 &:nth-of-type(2) {
@@ -64,7 +64,7 @@
             background: #fff;
             width: 100%;
             padding: 20px 0;
-            transition: top .2s;
+            transition: top .1s;
             @include mobile {
                 top: 10vh;
             }
@@ -85,7 +85,7 @@
                     }
                     @for $i from 1 to 6 {
                         &:nth-of-type(#{$i}) {
-                            animation-delay: #{$i *.5}s;
+                            animation-delay: #{$i *.1}s;
                         }
                     }
                 }
@@ -136,7 +136,7 @@
             opacity: 0;
             animation: {
                 name: transformX;
-                duration: .4s;
+                duration: .2s;
                 fill-mode: forwards;
             }
         }
@@ -209,7 +209,7 @@
                 animation: {
                     name: transformY;
                     delay: .8s;
-                    duration: .8s;
+                    duration: .4s;
                     fill-mode: forwards;
                 }
             }
@@ -219,7 +219,7 @@
                 animation: {
                     name: transformX;
                     delay: 1.2s;
-                    duration: .8s;
+                    duration: .4s;
                     fill-mode: forwards;
                 }
             }
@@ -238,7 +238,7 @@
                 animation: {
                     name: transformX;
                     delay: .8s;
-                    duration: .8s;
+                    duration: .4s;
                     fill-mode: forwards;
                 }
             }
@@ -250,7 +250,7 @@
                     animation: {
                         name: transformX;
                         delay: 1.2s;
-                        duration: .8s;
+                        duration: .4s;
                         fill-mode: forwards;
                     }
 
