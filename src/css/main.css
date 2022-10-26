@@ -460,13 +460,14 @@
           height: 12vh;
           flex-direction: row-reverse;
           justify-content: center; }
-        .section-compare .inner .article ul {
+        .section-compare .inner .article .slick {
           height: 20vh;
           margin: 2vh auto;
-          overflow: hidden; }
-          .section-compare .inner .article ul li {
+          overflow: hidden;
+          position: relative; }
+          .section-compare .inner .article .slick li {
             padding: 6vw 6vw 0 12vw;
-            min-height: 20vh; }
+            height: 20vh; }
         .section-compare .inner .article-cargo_call {
           background: #41CC93;
           color: #fff; }

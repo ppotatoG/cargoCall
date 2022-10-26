@@ -563,13 +563,14 @@
                         flex-direction: row-reverse;
                         justify-content: center;
                     }
-                    ul {
+                    .slick {
                         height: 20vh;
                         margin: 2vh auto;
                         overflow: hidden;
+                        position: relative;
                         li {
                             padding: 6vw 6vw 0 12vw;
-                            min-height: 20vh;
+                            height: 20vh;
                         }
                     }
                     &-cargo_call {

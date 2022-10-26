@@ -46,4 +46,15 @@ const sections = document.querySelectorAll('[data-observer="true"]');
     });
 
     mapImg.addEventListener('click', e => changeGif(e.target));
+
+    if( isMobile ) {
+        $(".slick").slick({
+            vertical: true,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: false,
+            verticalSwiping: true
+        });
+    }
 })();
