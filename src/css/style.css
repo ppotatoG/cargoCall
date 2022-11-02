@@ -110,116 +110,6 @@ button {
   z-index: 9;
   background: #fff;
   box-shadow: 0 0 10px 0 #eee; }
-  @media (max-width: 767px) {
-    .header {
-      padding: 0 2vw;
-      box-sizing: border-box; }
-      .header .nav {
-        height: 10vh !important; }
-        .header .nav.nav-user ul {
-          gap: 4vw; }
-          .header .nav.nav-user ul li a.ico_wrap {
-            box-shadow: none; }
-        .header .nav ul.js-menu {
-          position: absolute;
-          top: 16vh;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: 4vw;
-          width: 100vw;
-          height: 84vh;
-          background: #fff;
-          left: -100vw;
-          opacity: 1;
-          transition-delay: 50ms;
-          transition: all 500ms cubic-bezier(0.62, 0.04, 0.3, 1.8); }
-          .header .nav ul.js-menu li a {
-            padding: 0 8vw;
-            background: #fff;
-            width: 100vw;
-            height: 6vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 0; }
-            .header .nav ul.js-menu li a::after {
-              display: block;
-              content: '';
-              transform: rotate(45deg);
-              border-style: solid;
-              border-width: 1px;
-              border-color: #454f5d;
-              border-left: none;
-              border-bottom: none;
-              width: 1vh;
-              height: 1vh; }
-        .header .nav ul .menu_btn {
-          position: relative; }
-          .header .nav ul .menu_btn a {
-            width: 40px;
-            height: 40px; }
-            .header .nav ul .menu_btn a span {
-              display: block;
-              position: absolute;
-              top: 50%;
-              left: 25%;
-              transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
-              background: #41CC93;
-              width: 50%;
-              height: 2px; }
-              .header .nav ul .menu_btn a span.bar01 {
-                transform: translateY(-6px);
-                animation-delay: 100ms; }
-              .header .nav ul .menu_btn a span.bar03 {
-                transform: translateY(6px);
-                animation-delay: 250ms; }
-        .header .nav ul .login_btn {
-          position: absolute;
-          top: 10vh;
-          background: #fff;
-          left: -100vw;
-          opacity: 1;
-          transition-delay: 50ms;
-          transition: all 500ms cubic-bezier(0.62, 0.04, 0.3, 1.8); }
-          .header .nav ul .login_btn a {
-            padding: 0 8vw;
-            background: #fff;
-            width: 100vw;
-            height: 6vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 0; }
-            .header .nav ul .login_btn a::after {
-              display: block;
-              content: '';
-              transform: rotate(45deg);
-              border-style: solid;
-              border-width: 1px;
-              border-color: #454f5d;
-              border-left: none;
-              border-bottom: none;
-              width: 1vh;
-              height: 1vh; }
-        .header .nav ul .join_btn a {
-          background: #41CC93;
-          color: #fff;
-          border-radius: 20px;
-          padding: 6px 16px; }
-          .header .nav ul .join_btn a:hover {
-            color: #fff; }
-      .header.menuView .nav ul .login_btn,
-      .header.menuView .nav ul.js-menu {
-        left: 0;
-        width: 100vw;
-        opacity: 1; }
-      .header.menuView .nav ul li a span.bar01 {
-        transform: rotate(40deg); }
-      .header.menuView .nav ul li a span.bar02 {
-        opacity: 0; }
-      .header.menuView .nav ul li a span.bar03 {
-        transform: rotate(-40deg); } }
   .header .inner {
     max-width: 1000px;
     margin: 0 auto;
@@ -261,6 +151,92 @@ button {
           display: none; }
         .header .nav ul li a:hover {
           color: #41CC93; }
+  @media (max-width: 767px) {
+    .header {
+      padding: 0 2vw;
+      box-sizing: border-box; }
+      .header .nav {
+        height: 10vh; }
+        .header .nav.nav-user ul {
+          gap: 4vw; }
+          .header .nav.nav-user ul li a.ico_wrap {
+            box-shadow: none; }
+          .header .nav.nav-user ul .auth_btn {
+            display: none; }
+          .header .nav.nav-user ul .contact_btn a {
+            background: #41CC93;
+            color: #fff;
+            border-radius: 20px;
+            padding: 6px 16px; }
+            .header .nav.nav-user ul .contact_btn a:hover {
+              color: #fff; }
+          .header .nav.nav-user ul .menu_btn {
+            position: relative; }
+            .header .nav.nav-user ul .menu_btn a {
+              width: 40px;
+              height: 40px; }
+              .header .nav.nav-user ul .menu_btn a span {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 25%;
+                transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
+                background: #41CC93;
+                width: 50%;
+                height: 2px; }
+                .header .nav.nav-user ul .menu_btn a span.bar01 {
+                  transform: translateY(-6px);
+                  animation-delay: 100ms; }
+                .header .nav.nav-user ul .menu_btn a span.bar03 {
+                  transform: translateY(6px);
+                  animation-delay: 250ms; }
+        .header .nav ul.js-menu {
+          position: absolute;
+          top: 10vh;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 4vw;
+          width: 100vw;
+          height: 90vh;
+          background: #fff;
+          left: -100vw;
+          opacity: 1;
+          transition-delay: 50ms;
+          transition: all 500ms cubic-bezier(0.62, 0.04, 0.3, 1.8); }
+          .header .nav ul.js-menu li a {
+            padding: 0 8vw;
+            background: #fff;
+            width: 100vw;
+            height: 6vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0; }
+            .header .nav ul.js-menu li a::after {
+              display: block;
+              content: '';
+              transform: rotate(45deg);
+              border-style: solid;
+              border-width: 1px;
+              border-color: #454f5d;
+              border-left: none;
+              border-bottom: none;
+              width: 1vh;
+              height: 1vh; }
+          .header .nav ul.js-menu li.contact_btn {
+            display: none; }
+      .header.menuView .nav ul .login_btn,
+      .header.menuView .nav ul.js-menu {
+        left: 0;
+        width: 100vw;
+        opacity: 1; }
+      .header.menuView .nav.nav-user ul .menu_btn a span.bar01 {
+        transform: rotate(40deg); }
+      .header.menuView .nav.nav-user ul .menu_btn a span.bar02 {
+        opacity: 0; }
+      .header.menuView .nav.nav-user ul .menu_btn a span.bar03 {
+        transform: rotate(-40deg); } }
 
 .footer .inner {
   max-width: 1000px;
